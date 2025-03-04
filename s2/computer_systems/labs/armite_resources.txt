@@ -1,0 +1,26 @@
+(Move) 					- MOV (dest), (val)
+(Add)					- ADD (dest), (val), (val)
+(Store) 				- STR (dest), (val)
+HALT
+(And) 					- AND (dest), (val), (val)
+(Or) 					- ORR (dest), (val), (val)
+(Else or)				- EOR (dest), (val), (val)
+(Logical shift left)	- LSL (dest), (val), (val)
+(Logical shift right)	- LSR (dest), (val), (val)
+(Load register byte)	- LDRB (dest), [array, index]		
+
+- - - - WRITE STUFF - - - -
+Signed int - .WriteSignedNum
+Unsigned int - .WriteUnsignedNum
+Hex - .WriteHex
+Character - .WriteChar
+String - .WriteString
+Input int - .InputNum
+
+- - - - IF STATEMENTS - - - -
+(Compare) 				- CMP (val), (val)
+operators on how to compare values:
+(>=)					- BGT (val), (val)
+(<=)					- BLT (val), (val)
+(!=)					- BNE (val), (val)
+(=)						- BEQ (val), (val)
