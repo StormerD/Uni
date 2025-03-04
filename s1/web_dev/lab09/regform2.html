@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="utf-8" />	
+	<meta name="description" content="Web development" />
+	<meta name="keywords"    content="Registration Form" />
+	<meta name="author"      content="Dylan Rodwell" />
+	<link rel="stylesheet" type="text/css" href="regform2_desktop.css">
+	<script type="text/javascript" src="validation.js"></script>
+	<title>Web Development Form Validation Demo</title>
+</head>
+<body>
+	<form id="regform" method="post" action=" http://mercury.ict.swin.edu.au/it000000/formtest.php">
+		<fieldset>
+			<legend>Account Information</legend>
+			<div class="textinput">
+				<label for="sid">User ID</label>
+				<input id="sid" type="text" name="id" />
+			</div>
+			<div class="textinput">
+				<label for="pwd1">Password</label>
+				<input id="pwd1" type="password" name="pwd1" />
+			</div>
+			<div class="textinput">
+				<label for="pwd2">Retype Password</label>
+				<input id="pwd2" type="password" name="pwd2" />
+			</div>
+		</fieldset>
+		<fieldset>
+			<legend>User Information</legend>
+			<div class="textinput">
+				<label for="uname">Name</label>
+				<input id="uname" type="text" name="uname" />
+			</div>
+			<div class="radioinput">
+				<fieldset>
+					<legend>Gender</legend>
+					<input id="genm" type="radio" name="gender" value="M" />
+					<label for="genm">Male</label>
+					<input id="genf" type="radio" name="gender" value="F" />
+					<label for="genf">Female</label>
+				</fieldset>
+			</div>
+		</fieldset>
+		<div class="buttoninput">
+			<input type="submit" value="Test Register" />
+		</div>
+	</form>
+</body>
+</html>

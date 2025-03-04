@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="description" content="Web Development" />
+    <meta name="keywords" content="HTML CSS" />
+    <meta name="author" content="Dylan Rodwell" />
+    <link rel="stylesheet" type="text/CSS" href="feStyle.css">
+    <title>Homepage</title>
+</head>
+
+<body>
+    <!-- Header -->
+    <header>
+        <div id="headingContainer">
+            <div id="headingBox">
+                <img src="images/logo.png" class="logoImage" alt="Sweet Life Logo">
+                <h1 id="heading">Features</h1>
+            </div>
+            <nav>
+                <ul>
+                    <li>
+                        <a class="hyperLink" href="index.html">Home</a>
+                        <a class="hyperLink" href="register.html">Register</a>
+                        <a class="hyperLink" href="order.html">Order</a>
+                        <a class="hyperLink" href="features.html" id="here">Features</a>
+                    </li>
+                </ul>
+            </nav>
+        </div>
+    </header>
+
+    <main>
+        <article id="art1">
+            <h2>Homepage</h2>
+            <ul>
+                <li>In all my pages I have incorporated a navigation bar in the header that can be used to navigate to
+                    every other page. This nav bar also highlights the background of the current page you are on in the
+                    nav bar.</li>
+                <li>
+                    My homepage also features a css animation to make the text over my image slide across the screen to
+                    it's intended position. For this image and text combination I took information from my favorite
+                    local ice cream shop and adapted that style into my page. This can be found <a href="index.html">here</a>.</li>
+            </ul>
+        </article>
+        <article id="art2">
+            <h2>Register Page</h2>
+            <ul>
+                <li>My registration form has inline error messages appearing at the heading of where the issue is so it
+                    is easy for users to tell where their submission is invalid. This can be found
+                    <a href="register.html">here</a>.
+                </li>
+            </ul>
+        </article>
+        <article id="art3">
+            <h2>Order Page</h2>
+            <ul>
+                <li>My order page has inline error messages like the registration page to help the user identify issues.
+                    This can be found <a href="order.html">here</a>.</li>
+                <li>My form has two sets of radio buttons that when the required option is selected, will display
+                    additional form data that the user will need to fill out. This is done by hiding the elements using
+                    JS when the page is loaded then displaying and hiding them when required. This can be found <a
+                        href="order.html">here</a>.</li>
+                <li>My form also has a checkbox to make the shipping address the same as the billing address to decrease
+                    the effort required to fill out my form and increase user's experience. This checkbox has validation
+                    to make sure the inputs of the billing address and post code are not empty before copying the values
+                    to the delivery address and post code. When this checkbox is ticked it also updates the delivery
+                    address and post code field live by running the function every time an input is entered into the
+                    fields. This can be found <a href="order.html">here</a>.</li>
+                <li>I have also used animations for my ice-cream images to grab the attention of my user and make my
+                    page feel more developed and professional. The animation is different durations on each image and I
+                    had to calculate percentages to make sure each image is traveling across the screen for the same
+                    specific time (1.275s). I just liked the way this time looked and wanted to make it consistent with
+                    each other image. This can be found <a href="order.html">here</a>.</li>
+            </ul>
+        </article>
+    </main>
+
+    <!-- Footer -->
+    <footer>
+        <div id="footerBox">
+            <img src="images/logo.png" class="logoImage" alt="Sweet Life Logo">
+            <h2 id="footerText">Dylan Rodwell: 105341089</h2>
+        </div>
+    </footer>
+</body>
+
+</html>

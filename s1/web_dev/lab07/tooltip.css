@@ -1,0 +1,30 @@
+	/* Style the tooltip box
+		apply style to HTML elements having a tooltip as class name
+	*/
+.tooltip {
+	/* tool tips are initially not visible */
+	display: none;
+	/* place tooltip according to the order in the HTML */
+	position: relative;
+	/* uses a lightblue background */
+	background-color: lightblue;
+	/* create a rounded corner */
+	border-radius: 5px;
+	/* center text inside the tooltip */
+	text-align: center;
+	/* add a 5px spacing around the text */
+	padding: 5px;
+	/* moves the only tooltip to right */
+	left: 1em;
+}
+
+	/* apply style to the text that is appended to the tooltip */
+.tooltip:after {
+	/* set an absolute position be specified (default is after) */
+	position: absolute;
+	/* specify the position */
+	top: 10px;
+	border-style: solid;
+	height: 0;
+	width: 0;
+}

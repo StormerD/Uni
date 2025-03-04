@@ -1,0 +1,218 @@
+/* body background */
+body {
+    height: 100%;
+    width: 96%;
+    background-color: whitesmoke;
+    margin-left: 2%;
+}
+
+
+/* Animation */
+@keyframes slide {
+    0% {height: 0%; width: 0%;}
+    100% {height: 100%; width: 100%;}
+}
+
+@keyframes flash {
+    0% {background-color: darkgrey; color: navy;}
+    100% {background-color: lightblue; color: black;}
+}
+
+
+/* Positioning */
+#headerDiv {
+    float: left;
+    width: 20%;
+    margin-left: 2%;
+    margin-top: 1%;
+    margin-bottom: 1%;
+    padding-left: 2%;
+    padding-right: 2%;
+}
+
+#headerDiv>h1 {
+    margin: 0;
+}
+
+#scheduleImage {
+    max-width: 7%;
+    position: relative;
+    float: left;
+    margin-left: 5%;
+    margin-bottom: 2%;
+    animation-name: slide;
+    animation-duration: 10s;
+}
+
+nav {
+    float: left;
+    margin-left: 5%;
+    width: 50%;
+    margin-top: 2.5%;
+}
+
+nav>ul {
+    float: left;
+    padding: 0;
+    width: 100%;
+    margin-top: 0;
+    margin-left: 0;
+}
+
+nav>ul>li {
+    width: 100%;
+}
+
+.hyperLink {
+    float: left;
+    width: 24%;
+    margin-left: 0.5%;
+    margin-right: 0.5%;
+    padding: 0.2em 0em 0.2em 0em;
+}
+
+#here {
+    animation-name: flash;
+    animation-duration: 2s;
+}
+
+table {
+    width: 100%;
+}
+
+td {
+    padding-top: 0.25%;
+    padding-left: 1%;
+}
+
+.box {
+    float: left;
+    width: 15px;
+    height: 15px;
+    margin-left: 10px;
+    margin-right: 5px;
+    margin-top: 0px;
+}
+
+.colourSpan {
+    width: 23%;
+    font-size: 0.8em;
+}
+
+#container {
+    float: left;
+    width: 50%;
+    margin-left: 7%;
+    margin-bottom: 0.5%;
+}
+
+footer {
+    margin-top: 1%;
+}
+
+
+/* Colouring And Formatting */
+#headerDiv {
+    background-color: lightblue;
+    text-align: center;
+    font-size: 2vw;
+    border-radius: 15px;
+}
+
+nav>ul {
+    list-style-type: none;
+}
+
+nav>ul>li {
+    text-align: center;
+}
+
+.hyperLink {
+    color: navy;
+    background-color: darkgrey;
+    font-size: 1vw;
+    text-decoration: underline transparent;
+    /* border:  solid whitesmoke; */
+    border-radius: 5px;
+    transition: text-decoration 0.5s;
+}
+
+.hyperLink:hover {
+    text-decoration-color: navy;
+}
+
+#here {
+    color: black;
+    background-color: lightblue;
+    text-decoration: underline transparent;
+    border-radius: 5px;
+    transition: text-decoration 0.5s;
+}
+
+#here:hover {
+    text-decoration-color: black;
+}
+
+#scheduleImage {
+    border-radius: 40px;
+}
+
+table,
+th,
+tr,
+td {
+    border: 1px solid black;
+    border-collapse: collapse;
+    font-size: 0.8vw;
+}
+
+th {
+    vertical-align: middle;
+    text-align: center;
+}
+
+td {
+    text-align: left;
+    vertical-align: middle;
+}
+
+#blueBox {
+    background-color: lightblue;
+}
+
+#redBox {
+    background-color: lightcoral;
+}
+
+#greenBox {
+    background-color: lightgreen;
+}
+
+#yellowBox {
+    background-color: khaki;
+}
+
+#container {
+    display: inline-block;
+}
+
+.colourSpan {
+    display: inline-block;
+    vertical-align: middle;
+}
+
+.web {
+    background-color: lightblue;
+}
+
+.ict {
+    background-color: lightcoral;
+}
+
+.netad {
+    background-color: lightgreen;
+}
+
+.nas {
+    background-color: khaki;
+}

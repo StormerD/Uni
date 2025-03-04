@@ -1,0 +1,31 @@
+{
+  "common": {
+    "accent": "0DDBB9",
+    "bg": "1E1E1E",
+    "fg": "D4D4D4"
+  },
+  "syntax": {
+    "tag": "E5118E",
+    "entity": "0DDAB6",
+    "string": "84D15E",
+    "regexp": "646695",
+    "markup": "569CD6",
+    "keyword": "B347DB",
+    "comment": "8C8C8C",
+    "constant": "B347DB",
+    "error": "F44747"
+  },
+  "ui": {
+    "line": "1E1E1E",
+    "panel": {
+      "bg": "252526",
+      "selected": "252526",
+      "border": "1E1E1E"
+    },
+    "selection": {
+      "bg": "ADD6FF26"
+    }
+  },
+  "base": "vs-dark",
+  "inherit": true
+}

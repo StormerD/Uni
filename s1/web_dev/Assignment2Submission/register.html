@@ -1,0 +1,104 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="description" content="Web Development" />
+    <meta name="keywords" content="HTML CSS Javascript" />
+    <meta name="author" content="Dylan Rodwell" />
+    <link rel="stylesheet" type="text/CSS" href="reStyle.css">
+    <script src="regVal.js"></script>
+    <title>Register</title>
+</head>
+
+<body id="body">
+    <!-- Header -->
+    <header>
+        <div id="headingContainer">
+            <div id="headingBox">
+                <img src="images/logo.png" class="logoImage" alt="Sweet Life Logo">
+                <h1 id="heading">Register</h1>
+            </div>
+            <nav>
+                <ul>
+                    <li>
+                        <a class="hyperLink" href="index.html">Home</a>
+                        <a class="hyperLink" href="register.html" id="here">Register</a>
+                        <a class="hyperLink" href="order.html">Order</a>
+                        <a class="hyperLink" href="features.html">Features</a>
+                    </li>
+                </ul>
+            </nav>
+        </div>
+    </header>
+
+    <!-- Registration Form -->
+    <form id="regForm" method="post" action="http://mercury.swin.edu.au/it000000/cos10005/regtest.php">
+        <!-- Username - textbox -->
+        <div class="formElement">
+            <label class="label" for="uname">Username</label><label class="errorMsg" id="unameError"></label><br>
+            <input class="inputBox" type="text" name="uname" id="uname">
+        </div>
+
+        <!-- Password - password -->
+        <div class="formElement">
+            <label class="label" for="pwd1">Password</label><label class="errorMsg" id="pwd1Error"></label><br>
+            <input class="inputBox" type="password" name="pwd1" id="pwd1">
+        </div>
+
+        <!-- RePassword - password -->
+        <div class="formElement">
+            <label class="label" for="pwd2">Retype Password</label><label class="errorMsg" id="pwd2Error"></label><br>
+            <input class="inputBox" type="password" name="pwd2" id="pwd2">
+        </div>
+
+        <!-- Gender - radio -->
+        <div class="formElement">
+            <label class="label">Gender</label><label class="errorMsg" id="genError"></label><br>
+            <span>
+                <label class="inLabel" for="genm">Male: <input type="radio" name="gender" id="genm"
+                        value="Male"></label>
+                <label class="inLabel" for="genf">Female: <input type="radio" name="gender" id="genf"
+                        value="Female"></label>
+            </span>
+        </div>
+
+        <!-- Allergies - checklist -->
+        <div class="formElement">
+            <label class="label">Allergies</label><br>
+            <label class="inLabel">Nut<input class="inputButton" type="checkbox" name="nAl" value="true"></label>
+            <label class="inLabel">Gluten<input class="inputButton" type="checkbox" name="gAl" value="true"></label>
+            <label class="inLabel">Lactose<input class="inputButton" type="checkbox" name="lAl" value="true"></label>
+            <label class="inLabel">Dairy<input class="inputButton" type="checkbox" name="dAl" value="true"></label>
+        </div>
+
+        <!-- Favorite Ice-Cream - select -->
+        <div class="formElement">
+            <label class="label" for="favIC">Favorite Ice-Cream Flavour</label><label class="errorMsg"
+                id="favError"></label><br>
+            <select class="inputBox" id="favIC" name="favIC">
+                <option value="">Please Select</option>
+                <option value="chocMint">Choc Mint</option>
+                <option value="choc">Chocolate</option>
+                <option value="straw">Strawberry</option>
+                <option value="cac">Cookies and Cream</option>
+            </select>
+        </div>
+
+        <!-- Submit Button -->
+        <div id="btnDiv">
+            <input type="submit" class="button" id="sButton" value="Register">
+            <input type="reset" class="button" id="rButton" value="Clear">
+        </div>
+    </form>
+
+    <!-- Footer -->
+    <footer>
+        <div id="footerBox">
+            <img src="images/logo.png" class="logoImage" alt="Sweet Life Logo">
+            <h2 id="footerText">Dylan Rodwell: 105341089</h2>
+        </div>
+    </footer>
+</body>
+
+</html>

@@ -1,0 +1,25 @@
+.container {
+    width: 30%;
+    margin-left: 10%;
+}
+
+#continueButton {
+    height: 35px;
+    width: 100px;
+    font-size: 17px;
+}
+
+.formContainer {
+    background-color: lightgrey;
+    border-radius: 25px;
+    width: 400px;
+}
+
+form {
+    margin-left: 25px;
+}
+
+#elementsContainer {
+    padding-top: 1px;
+    padding-bottom: 1px;
+}

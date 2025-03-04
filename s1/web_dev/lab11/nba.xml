@@ -1,0 +1,33 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Teams>
+	<Team>
+		<TeamName>Lakers</TeamName>
+		<Location>Los Angeles</Location> 
+		<StarPlayer>Kobe Bryant</StarPlayer>
+		<Stadium>Staples Center</Stadium>
+    </Team>
+    <Team>
+		<TeamName>Heats</TeamName>
+		<Location>Miami</Location> 
+		<StarPlayer>LeBron James</StarPlayer>
+		<Stadium>American Airlines Arena</Stadium>
+    </Team>
+    <Team>
+		<TeamName>Knicks</TeamName>
+		<Location>New York</Location> 
+		<StarPlayer>Carmelo Anthony</StarPlayer>
+		<Stadium>Madison Square Garden</Stadium>
+    </Team>
+	<Team>
+		<TeamName>Thunders</TeamName>
+		<Location>Oklahoma City</Location> 
+		<StarPlayer>Kevin Durant</StarPlayer>
+		<Stadium>Chesapeake Energy Arena</Stadium>
+    </Team>
+    <Team>
+		<TeamName>Clippers</TeamName>
+		<Location>Los Angeles</Location> 
+		<StarPlayer>Chris Paul</StarPlayer>
+		<Stadium>Staples Center</Stadium>
+    </Team>
+</Teams>

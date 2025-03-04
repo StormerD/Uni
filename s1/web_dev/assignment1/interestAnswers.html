@@ -1,0 +1,203 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="description" content="Web Development Assignment1" />
+    <meta name="keywords" content="HTML, CSS" />
+    <meta name="author" content="Dylan Rodwell" />
+    <link rel="stylesheet" type="text/css" href="css/interestStylesheet.css" />
+    <title>Interest Answers</title>
+</head>
+
+<body>
+    <header>
+        <div id="headerDiv">
+            <h1>Interests</h1>
+        </div>
+        <nav>
+            <ul>
+                <li>
+                    <a class="hyperLink" href="home.html">Home</a>
+                    <a class="hyperLink" href="interest.html" id="here">Interests</a>
+                    <a class="hyperLink" href="schedule.html">Timetable</a>
+                    <a class="hyperLink" href="animation.html">Animation</a>
+                </li>
+            </ul>
+        </nav>
+    </header>
+
+    <form id="interestForm" method="POST" action="http://mercury.swin.edu.au/it000000/cos10005/surveytest.php">
+        <div id="elementsContainer">
+            <!-- Intro -->
+            <p>Please answer the questions in this survey to let Dylan know how well you know his interests.</p>
+            <p>Note: I have given the answers to the side of every question if you are interested but this does not
+                affect anything else in the form.</p>
+            <p>Hover over the red circles to see the answer.</p>
+
+            <!-- Image -->
+            <img id="interestImage" src="images/interestPose.JPG" alt="Dylan playing field hockey">
+
+            <!-- Question 1 -->
+            <div class="question">
+                <label><b>Q1. What is Dylan's favourite genre of music?</b></label> <br>
+                <span class="answer">Rock</span> <br>
+                <label for="popInput"><input id="popInput" name="q1" type="radio" value="pop">Pop</label> <br>
+                <label for="rnbInput"><input id="rnbInput" name="q1" type="radio" value="rnb">RNB</label> <br>
+                <label for="rockInput"><input id="rockInput" name="q1" type="radio" value="rock">Rock</label> <br>
+                <label for="countryInput"><input id="countryInput" name="q1" type="radio"
+                        value="country">Country</label>
+            </div>
+
+            <!-- Question 2 -->
+            <div class="question">
+                <label><b>Q2. What is Dylan's favourite music artists in order?</b></label> <br>
+                <label>Note: (in order of 1 the most liked and 5 the least)</label> <br>
+                <table>
+                    <tr>
+                        <td>Foo Fighters</td>
+                        <td><select id="fooFightersSelect" name="fooFightersSelect">
+                                <option value="1">1</option>
+                                <option value="2">2</option>
+                                <option value="3">3</option>
+                                <option value="4">4</option>
+                                <option value="5">5</option>
+                            </select>
+                        </td>
+                        <td class="answerTD">&nbsp;<span class="answer">1</span></td>
+                    </tr>
+                    <tr>
+                        <td>The Killers</td>
+                        <td><select id="theKillersSelect" name="theKillersSelect">
+                                <option value="1">1</option>
+                                <option value="2">2</option>
+                                <option value="3">3</option>
+                                <option value="4">4</option>
+                                <option value="5">5</option>
+                            </select>
+                        </td>
+                        <td class="answerTD">&nbsp;<span class="answer">3</span></td>
+                    </tr>
+                    <tr>
+                        <td>AC/DC</td>
+                        <td><select id="acdcSelect" name="acdcSelect">
+                                <option value="1">1</option>
+                                <option value="2">2</option>
+                                <option value="3">3</option>
+                                <option value="4">4</option>
+                                <option value="5">5</option>
+                            </select>
+                        </td>
+                        <td class="answerTD">&nbsp;<span class="answer">5</span></td>
+                    </tr>
+                    <tr>
+                        <td>Metallica</td>
+                        <td><select id="metallicaSelect" name="metallicaSelect">
+                                <option value="1">1</option>
+                                <option value="2">2</option>
+                                <option value="3">3</option>
+                                <option value="4">4</option>
+                                <option value="5">5</option>
+                            </select>
+                        </td>
+                        <td class="answerTD">&nbsp;<span class="answer">4</span></td>
+                    </tr>
+                    <tr>
+                        <td>Green Day</td>
+                        <td><select id="greenDaySelect" name="greenDaySelect">
+                                <option value="1">1</option>
+                                <option value="2">2</option>
+                                <option value="3">3</option>
+                                <option value="4">4</option>
+                                <option value="5">5</option>
+                            </select>
+                        </td>
+                        <td class="answerTD">&nbsp;<span class="answer">2</span></td>
+                    </tr>
+                </table>
+            </div>
+
+            <!-- Question 3 -->
+            <div class="question">
+                <label><b>Q3. What is Dylan's favourite book?</b></label> <br>
+                <div class="bottomBreak">
+                    <label for="bookName">Title: <input id="bookName" name="bookName" type="text"
+                            maxlength="20"></label>
+                    <label for="bookAuthor">Author: <input id="bookAuthor" name="bookAuthor" type="text"
+                            maxlength="20"></label> <br>
+                </div>
+                &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span class="answer">House Of
+                    Leaves</span>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span class="answer">Mark Z.
+                    Danielewski</span>
+            </div>
+
+            <!-- Question 4 -->
+            <div class="question">
+                <label><b>Q4. What is Dylan's favourite movie franchise?</b></label> <br>
+                <label for="movieInput"><input id="movieInput" name="movieInput" type="text" maxlength="15"></label>&nbsp;&nbsp;
+                <span class="answer">Star Wars</span>
+            </div>
+
+            <!-- Question 5 -->
+            <div class="question">
+                <label><b>Q5. What are Dylan's favourite video games he plays?</b></label> <br>
+                <label>Note: (name and hours played)</label> <br>
+                <label for="game1Name">Game 1: <input id="game1Name" name="game1Name" type="text"
+                        maxlength="15"></label>
+                <label for="game1Time">Hours: <input id="game1Time" name="game1Time" type="number" max="500"></label>
+                &nbsp;&nbsp;&nbsp;<span class="answer">Rimworld</span>&nbsp;<span class="answer">430</span>
+                <br>
+
+                <label for="game2Name">Game 2: <input id="game2Name" name="game2Name" type="text"
+                        maxlength="15"></label>
+                <label for="game2Time">Hours: <input id="game2Time" name="game2Time" type="number" max="500"></label>
+                &nbsp;&nbsp;&nbsp;<span class="answer">Dishonored</span>&nbsp;<span class="answer">250</span>
+                <br>
+
+                <label for="game3Name">Game 3: <input id="game3Name" name="game3Name" type="text"
+                        maxlength="15"></label>
+                <label for="game3Time">Hours: <input id="game3Time" name="game3Time" type="number" max="500"></label>
+                &nbsp;&nbsp;&nbsp;<span class="answer">Skyrim</span>&nbsp;<span class="answer">185</span>
+                <br>
+
+                <label for="game4Name">Game 4: <input id="game4Name" name="game4Name" type="text"
+                        maxlength="15"></label>
+                <label for="game4Time">Hours: <input id="game4Time" name="game4Time" type="number" max="500"></label>
+                &nbsp;&nbsp;&nbsp;<span class="answer">Fallout 4</span>&nbsp;<span class="answer">98</span>
+                <br>
+
+                <label for="game5Name">Game 5: <input id="game5Name" name="game5Name" type="text"
+                        maxlength="15"></label>
+                <label for="game5Time">Hours: <input id="game5Time" name="game5Time" type="number" max="500"></label>
+                &nbsp;&nbsp;&nbsp;<span class="answer">Metro Exodus</span>&nbsp;<span class="answer">69</span>
+            </div>
+
+            <!-- Question 6 -->
+            <div class="question">
+                <label><b>Q6. What sport does Dylan Play?</b></label> <br>
+                <label for="aflRadio"><input id="aflRadio" name="sportRadio" type="radio" value="afl">AFL</label>
+                <label for="soccerRadio"><input id="soccerRadio" name="sportRadio" type="radio"
+                        value="soccer">Soccer</label>
+                <label for="fHockeyRadio"><input id="fHockeyRadio" name="sportRadio" type="radio" value="fHockey">Field
+                    Hockey</label>
+                    &nbsp;<span class="answer">Field Hockey</span>
+
+            </div>
+
+            <div id="buttonContainer">
+                <!-- Submit Button -->
+                <input class="button" id="submitButton" type="submit" value="Submit">
+
+                <!-- Reset Button -->
+                <input class="button" id="resetButton" type="reset" value="Reset">
+                
+                <!-- Back Button -->
+                <a class="button" id="backButton" href="interest.html">Back</a>
+            </div>
+        </div>
+
+    </form>
+    <footer>Webpage By Dylan Rodwell: 105341089</footer>
+</body>
+
+</html>

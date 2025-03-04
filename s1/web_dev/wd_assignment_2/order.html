@@ -1,0 +1,174 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="description" content="Web Development" />
+    <meta name="keywords" content="HTML CSS Javascript" />
+    <meta name="author" content="Dylan Rodwell" />
+    <link rel="stylesheet" type="text/CSS" href="orStyle.css">
+    <script src="ordVal.js"></script>
+    <title>Order</title>
+</head>
+
+<body>
+    <!-- Header -->
+    <header>
+        <div id="headingContainer">
+            <div id="headingBox">
+                <img src="images/logo.png" class="logoImage" alt="Sweet Life Logo">
+                <h1 id="heading">Order</h1>
+            </div>
+            <nav>
+                <ul>
+                    <li>
+                        <a class="hyperLink" href="index.html">Home</a>
+                        <a class="hyperLink" href="register.html">Register</a>
+                        <a class="hyperLink" href="order.html" id="here">Order</a>
+                        <a class="hyperLink" href="features.html">Features</a>
+                    </li>
+                </ul>
+            </nav>
+        </div>
+    </header>
+
+    <!-- Order Form -->
+    <form id="ordForm" method="post" action="http://mercury.swin.edu.au/it000000/cos10005/regtest.php">
+
+        <!-- Ice Cream Choice - ??? -->
+        <div class="formElement" id="orderElement">
+            <label class="label">Ice Cream</label><label class="errorMsg" id="orderError"></label><br>
+            <div id="ordSpan">
+                <div class="choice" id="choice1">
+                    <label>Choc Chunk</label><br>
+                    <img class="ordImg" id="image1" src="images/choc_cup.png"
+                        alt="Sweet Life Choc Chunk Ice-Cream in a cup"><br>
+                    <span>
+                        <button type="button" class="orderButton" id="oneM"> - </button>
+                        <input type="hidden" name="IceCream1" id="oneOrdCntInp" value="0">
+                        <label class="ordCnt" id="oneOrdCntDiv">0</label>
+                        <button type="button" class="orderButton" id="oneP">+</button>
+                    </span>
+                </div>
+                <div class="choice" id="choioce2">
+                    <label>Choc Mint Mania</label><br>
+                    <img class="ordImg" id="image2" src="images/choc_mint_cup.png"
+                        alt="Sweet Life Choc Mint Mania Ice-Cream in a cup"><br>
+                    <span class="buttons">
+                        <button type="button" class="orderButton" id="twoM"> - </button>
+                        <input type="hidden" name="IceCream2" id="twoOrdCntInp" value="0">
+                        <label class="ordCnt" id="twoOrdCntDiv">0</label>
+                        <button type="button" class="orderButton" id="twoP">+</button>
+                    </span>
+                </div>
+                <div class="choice" id="choice3">
+                    <label>Strawberry Swirl</label><br>
+                    <img class="ordImg" id="image3" src="images/Strawberry_cup.png"
+                        alt="Sweet Life Strawberry Swirl Ice-Cream in a cup"><br>
+                    <span class="buttons">
+                        <button type="button" class="orderButton" id="threeM"> - </button>
+                        <input type="hidden" name="IceCream3" id="threeOrdCntInp" value="0">
+                        <label class="ordCnt" id="threeOrdCntDiv">0</label>
+                        <button type="button" class="orderButton" id="threeP">+</button>
+                    </span>
+                </div>
+            </div>
+        </div>
+
+        <!-- Email - Email -->
+        <div class="formElement">
+            <label class="label" for="uemail">Email</label><label class="errorMsg" id="emailError"></label><br>
+            <input type="text" class="inputBox" name="uemail" id="uemail">
+        </div>
+
+        <!-- Contact Number - Tel -->
+        <div class="formElement">
+            <label class="label" for="uphone">Contact Number</label><label class="errorMsg" id="phoneError"></label><br>
+            <input type="text" class="inputBox" name="uphone" id="uphone" maxlength="15">
+        </div>
+
+        <!-- Collection Method - Radio -->
+        <div class="formElement">
+            <label class="label">Collection Method</label><label class="errorMsg" id="methodError"></label><br>
+            <span>
+                <label class="inLabel" for="dMethod">Delivery: <input type="radio" name="cMethod" id="dMethod"
+                        value="delivery"></label>
+                <label class="inLabel" for="pMethod">Pickup: <input type="radio" name="cMethod" id="pMethod"
+                        value="pickup"></label>
+            </span>
+        </div>
+
+        <!-- Billing Address - text -->
+        <div class="formElement">
+            <label class="label">Billing Address</label><label class="errorMsg" id="bAddressError"></label><br>
+            <label class="inLabel" for="bAddress">Address: <input type="text" class="inputBox" name="bAddress"
+                    id="bAddress"></label>&nbsp;&nbsp;
+            <label class="inLabel" for="bPC">Post Code: <input type="text" class="inputBox" name="bPC" id="bPC"
+                    maxlength="4"></label>
+
+            <!-- SameAs Button -->
+            <!-- for the life of me I for some reason couldn't get the checkbox to work 
+                                how I wanted it to so I used a button with the same functionality -->
+            <div id="hidden1">
+                <label class="inLabel" for="sameAs"></label><input type="checkbox" id="sameAs">Same as billing address<label class="errorMsg"
+                    id="sameAsError"></label>
+            </div>
+        </div>
+
+        <!-- Delivery Address - text - (if collection method = delivery) -->
+        <div class="formElement" id="hidden2">
+            <label class="label">Delivery Address</label><label class="errorMsg" id="dAddressError"></label><br>
+            <label class="inLabel" for="dAddress">Address: <input type="text" class="inputBox" name="dAddress"
+                    id="dAddress"></label>&nbsp;&nbsp;
+            <label class="inLabel" for="dPC">Post Code: <input type="text" class="inputBox" name="dPC" id="dPC"
+                    maxlength="4"></label>
+        </div>
+
+        <!-- Pay Online/Pickup -->
+        <div class="formElement">
+            <label class="label">Payment Method</label><label class="errorMsg" id="payMethodError"></label><br>
+            <span>
+                <label class="inLabel" for="onlineMethod">Online: <input type="radio" name="paymentMethod"
+                        id="onlineMethod" value="online"></label>
+                <label class="inLabel" for="pickupMethod">At Pickup: <input type="radio" name="paymentMethod"
+                        id="pickupMethod" value="pickup"></label>
+            </span>
+        </div>
+
+        <!-- Card Info - text -->
+        <div class="formElement" id="hidden3">
+            <label class="label">Payment</label><label class="errorMsg" id="cardError"></label><br>
+            <label class="inLabel" for="cType">Card Type: </label>&nbsp;&nbsp;<select class="inputBox" id="cType"
+                name="cType">
+                <option value="" selected>Please Select</option>
+                <option value="visa">Visa</option>
+                <option value="mastercard">Mastercard</option>
+                <option value="aexpress">American Express</option>
+            </select><br>
+            <label class="inLabel" for="cNum">Card number: </label>&nbsp;&nbsp;&nbsp;<input type="text" class="inputBox"
+                name="cNum" id="cNum" maxlength="16"><label class="errorMsg" id="cNumError"></label><br>
+            <label class="inLabel" for="cName">Name on card: </label>&nbsp;&nbsp;<input type="text" class="inputBox"
+                name="cName" id="cName" maxlength="16"><br>
+            <label class="inLabel" for="cDate">Expiration date: </label>&nbsp;&nbsp;<input type="month" class="inputBox"
+                name="cDate" id="cDate"><br>
+            <label class="inLabel" for="cPin">CVV: </label>&nbsp;&nbsp;<input type="text" class="inputBox"
+                name="cPin" id="cPin" maxlength="3"><label class="errorMsg" id="cPinError"></label><br>
+        </div>
+
+        <!-- Submit Button -->
+        <div id="btnDiv">
+            <input type="submit" class="button" id="sButton" value="Register">
+            <input type="reset" class="button" id="rButton" value="Clear">
+        </div>
+    </form>
+
+    <!-- Footer -->
+    <footer>
+        <div id="footerBox">
+            <img src="images/logo.png" class="logoImage" alt="Sweet Life Logo">
+            <h2 id="footerText">Dylan Rodwell: 105341089</h2>
+        </div>
+    </footer>
+</body>
+
+</html>

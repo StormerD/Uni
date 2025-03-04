@@ -1,0 +1,245 @@
+/* body background */
+body {
+    height: 100%;
+    width: 96%;
+    background-color: whitesmoke;
+    margin-left: 2%;
+}
+
+
+/* Animation */
+@keyframes slide {
+    0% {left: 100%;}
+    100% {left: 0%;}
+}
+
+@keyframes flash {
+    0% {background-color: darkgrey; color: navy;}
+    100% {background-color: lightblue; color: black;}
+}
+
+
+/* Positioning */
+#headerDiv {
+    width: 20%;
+    margin-left: 38%;
+    margin-top: 1%;
+    margin-bottom: 1%;
+    padding-left: 2%;
+    padding-right: 2%;
+}
+
+#headerDiv>h1 {
+    margin: 0;
+}
+
+nav {
+    width: 100%;
+}
+
+nav>ul {
+    float: left;
+    clear: right;
+    padding: 0;
+    width: 100%;
+    margin-top: 0;
+    margin-left: 0;
+}
+
+nav>ul>li {
+    width: 50%;
+    margin-left: 25%;
+}
+
+.hyperLink {
+    float: left;
+    width: 24%;
+    margin-left: 0.5%;
+    margin-right: 0.5%;
+    padding: 0.2em 0em 0.2em 0em;
+}
+
+#here {
+    animation-name: flash;
+    animation-duration: 2s;
+}
+
+#elementsContainer {
+    width: 70%;
+    margin-left: 15%;
+    margin-top: 3%;
+    padding-left: 2%;
+    padding-top: 0.5%;
+    padding-bottom: 2%;
+}
+
+#interestImage {
+    max-width: 40%;
+    float: right;
+    margin-right: 10%;
+    position: relative;
+    animation-name: slide;
+    animation-duration: 2s;
+}
+
+.question {
+    margin-bottom: 2%;
+    margin-left: 5%;
+}
+
+#buttonContainer {
+    margin-top: 3%;
+    width: 100%;
+    clear: both;
+    padding-bottom: 2%;
+}
+
+#submitButton {
+    float: left;
+    margin-left: 5%;
+    width: 20%;
+}
+
+#resetButton {
+    float: left;
+    margin-left: 2%;
+    width: 20%;
+}
+
+#answerButton {
+    float: right;
+    margin-right: 10%;
+    width: 10%;
+}
+
+#backButton {
+    float: right;
+    margin-right: 10%;
+    width: 10%;
+}
+
+input {
+    max-width: 15%;
+}
+
+.answerTD {
+    width: 70%;
+}
+
+.answer {
+    padding-left: 2%;
+    padding-right: 2%;
+}
+
+.bottomBreak {
+    margin-bottom: 1%;
+}
+
+footer {
+    margin-left: 15%;
+    margin-top: 1%;
+    margin-bottom: 5%;
+}
+
+
+/* Colouring And Formatting */
+#headerDiv {
+    background-color: lightblue;
+    text-align: center;
+    font-size: 2vw;
+    border-radius: 15px;
+}
+
+nav>ul {
+    list-style-type: none;
+}
+
+nav>ul>li {
+    text-align: center;
+}
+
+.hyperLink {
+    color: navy;
+    background-color: darkgrey;
+    font-size: 1vw;
+    text-decoration: underline transparent;
+    /* border:  solid whitesmoke; */
+    border-radius: 5px;
+    transition: text-decoration 0.5s;
+}
+
+.hyperLink:hover {
+    text-decoration-color: navy;
+}
+
+#here {
+    color: black;
+    background-color: lightblue;
+    text-decoration: underline transparent;
+    border-radius: 5px;
+    transition: text-decoration 0.5s;
+}
+
+#here:hover {
+    text-decoration-color: black;
+}
+
+#elementsContainer {
+    background-color: lightgrey;
+    border-radius: 15px;
+    font-size: 1.2vw;
+}
+
+label {
+    font-size: 1.2vw;
+}
+
+#interestImage {
+    border-radius: 15px;
+}
+
+.button {
+    text-align: center;
+    font-size: 1.3vw;
+    border-radius: 15px;
+    border: 1px solid transparent;
+    background-color: lightblue;
+    font-weight: bold;
+    color: black;
+}
+
+#answerButton {
+    color: navy;
+    background-color: darkgrey;
+    text-decoration: underline transparent;
+    transition: text-decoration 0.5s;
+}
+
+#answerButton:hover {
+    text-decoration-color: navy;
+}
+
+#backButton {
+    color: navy;
+    background-color: darkgrey;
+    text-decoration: underline transparent;
+    transition: text-decoration 0.5s;
+}
+
+#backButton:hover {
+    text-decoration-color: navy;
+}
+
+.answer {
+    text-align: center;
+    color: transparent;
+    background-color: lightcoral;
+    border-radius: 15px;
+}
+
+.answer:hover {
+    color: red;
+    background-color: whitesmoke;
+}
+
+

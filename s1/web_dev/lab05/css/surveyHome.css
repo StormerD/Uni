@@ -1,0 +1,78 @@
+/* Header Element */
+header {
+    color: white;
+    background-color: navy;
+}
+
+/* Nav Element */
+nav {
+    background-color: darkgrey;
+}
+
+/* Nav List Element */
+nav > ul {
+    float: left;
+    list-style-type: none;
+    padding: 0px;
+    margin: 0px;
+    width: 100%;
+}
+
+/* Nav Hyperlink Elements */
+nav > ul > li > a {
+    float: left;
+    width: 6em;
+    text-decoration: none;
+    color: white;
+    background-color: blue;
+    padding: 0.2em 0.6em 0.2em 0.6em;
+    border: 1px solid white;
+}
+
+/* Nav Hyperlink Hover */
+nav > a:hover {
+    background-color: brown;
+}
+
+/* Main Element */
+main {
+    float: left;
+    width: 65%;
+}
+
+/* Article Element */
+article {
+    color: black;
+    background-color: lightgrey;
+    width: 70%;
+    height: 40%;
+    box-shadow: 3px 3px 3px 2px #797979;
+}
+
+/* Article Headings */
+article > h2 {
+    text-shadow: 2px 2px 2px #aaa;
+}
+
+/* Aside Element */
+aside {
+    float: right;
+    width: 30%;
+    font-size: 8px;
+    font-style: italic;
+    color: green;
+    background-color: lightgrey;
+}
+
+/* Section Element */
+aside > section {
+    color: green;
+    background-color: lightblue;
+}
+
+/* Footer Element */
+footer {
+    clear: both;
+    color: white;
+    background-color: navy;
+}
