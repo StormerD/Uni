@@ -1,0 +1,13 @@
+{
+  "version": 2,
+  "dgSpecHash": "tLXFR7QfqAI=",
+  "success": true,
+  "projectFilePath": "C:\\Users\\drodw\\OneDrive\\Desktop\\shortcuts\\uni\\s3\\oop\\OOP - Topic 01 - Part C - Card Demo-1\\CardDemo\\CardDemo\\CardDemo.csproj",
+  "expectedPackageFiles": [
+    "C:\\Users\\drodw\\.nuget\\packages\\microsoft.netcore.app.ref\\3.1.0\\microsoft.netcore.app.ref.3.1.0.nupkg.sha512",
+    "C:\\Users\\drodw\\.nuget\\packages\\microsoft.windowsdesktop.app.ref\\3.1.0\\microsoft.windowsdesktop.app.ref.3.1.0.nupkg.sha512",
+    "C:\\Users\\drodw\\.nuget\\packages\\microsoft.aspnetcore.app.ref\\3.1.10\\microsoft.aspnetcore.app.ref.3.1.10.nupkg.sha512",
+    "C:\\Users\\drodw\\.nuget\\packages\\microsoft.netcore.app.host.win-x64\\3.1.32\\microsoft.netcore.app.host.win-x64.3.1.32.nupkg.sha512"
+  ],
+  "logs": []
+}

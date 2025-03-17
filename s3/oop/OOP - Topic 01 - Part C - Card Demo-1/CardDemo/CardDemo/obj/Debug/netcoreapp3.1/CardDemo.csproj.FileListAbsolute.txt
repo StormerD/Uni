@@ -1,0 +1,13 @@
+/Users/cpierce/Desktop/CardDemo/CardDemo/bin/Debug/netcoreapp3.1/CardDemo.deps.json
+/Users/cpierce/Desktop/CardDemo/CardDemo/bin/Debug/netcoreapp3.1/CardDemo.runtimeconfig.json
+/Users/cpierce/Desktop/CardDemo/CardDemo/bin/Debug/netcoreapp3.1/CardDemo.runtimeconfig.dev.json
+/Users/cpierce/Desktop/CardDemo/CardDemo/bin/Debug/netcoreapp3.1/CardDemo.dll
+/Users/cpierce/Desktop/CardDemo/CardDemo/bin/Debug/netcoreapp3.1/CardDemo.pdb
+/Users/cpierce/Desktop/CardDemo/CardDemo/obj/Debug/netcoreapp3.1/CardDemo.csproj.AssemblyReference.cache
+/Users/cpierce/Desktop/CardDemo/CardDemo/obj/Debug/netcoreapp3.1/CardDemo.AssemblyInfoInputs.cache
+/Users/cpierce/Desktop/CardDemo/CardDemo/obj/Debug/netcoreapp3.1/CardDemo.AssemblyInfo.cs
+/Users/cpierce/Desktop/CardDemo/CardDemo/obj/Debug/netcoreapp3.1/CardDemo.csproj.CoreCompileInputs.cache
+/Users/cpierce/Desktop/CardDemo/CardDemo/obj/Debug/netcoreapp3.1/CardDemo.dll
+/Users/cpierce/Desktop/CardDemo/CardDemo/obj/Debug/netcoreapp3.1/CardDemo.pdb
+/Users/cpierce/Desktop/CardDemo/CardDemo/obj/Debug/netcoreapp3.1/CardDemo.genruntimeconfig.cache
+/Users/cpierce/Desktop/CardDemo/CardDemo/obj/Debug/netcoreapp3.1/CardDemo.GeneratedMSBuildEditorConfig.editorconfig
