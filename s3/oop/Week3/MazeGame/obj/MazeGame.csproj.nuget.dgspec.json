@@ -1,17 +1,17 @@
 {
   "format": 1,
   "restore": {
-    "C:\\Users\\drodw\\OneDrive\\Desktop\\shortcuts\\uni\\s3\\oop\\Week2\\2.2\\app\\app.csproj": {}
+    "C:\\Users\\drodw\\OneDrive\\Desktop\\shortcuts\\uni\\s3\\oop\\Week3\\MazeGame\\MazeGame.csproj": {}
   },
   "projects": {
-    "C:\\Users\\drodw\\OneDrive\\Desktop\\shortcuts\\uni\\s3\\oop\\Week2\\2.2\\app\\app.csproj": {
+    "C:\\Users\\drodw\\OneDrive\\Desktop\\shortcuts\\uni\\s3\\oop\\Week3\\MazeGame\\MazeGame.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "C:\\Users\\drodw\\OneDrive\\Desktop\\shortcuts\\uni\\s3\\oop\\Week2\\2.2\\app\\app.csproj",
-        "projectName": "app",
-        "projectPath": "C:\\Users\\drodw\\OneDrive\\Desktop\\shortcuts\\uni\\s3\\oop\\Week2\\2.2\\app\\app.csproj",
+        "projectUniqueName": "C:\\Users\\drodw\\OneDrive\\Desktop\\shortcuts\\uni\\s3\\oop\\Week3\\MazeGame\\MazeGame.csproj",
+        "projectName": "MazeGame",
+        "projectPath": "C:\\Users\\drodw\\OneDrive\\Desktop\\shortcuts\\uni\\s3\\oop\\Week3\\MazeGame\\MazeGame.csproj",
         "packagesPath": "C:\\Users\\drodw\\.nuget\\packages\\",
-        "outputPath": "C:\\Users\\drodw\\OneDrive\\Desktop\\shortcuts\\uni\\s3\\oop\\Week2\\2.2\\app\\obj\\",
+        "outputPath": "C:\\Users\\drodw\\OneDrive\\Desktop\\shortcuts\\uni\\s3\\oop\\Week3\\MazeGame\\obj\\",
         "projectStyle": "PackageReference",
         "configFilePaths": [
           "C:\\Users\\drodw\\AppData\\Roaming\\NuGet\\NuGet.Config"
