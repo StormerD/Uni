@@ -1,5 +1,3 @@
-using System;
-
 namespace SwinAdventure {
     public class Item {
         // fields
@@ -25,6 +23,20 @@ namespace SwinAdventure {
             }
         }
 
+        // defines  ShortDescription property
+        public string ShortDescription {
+            get {
+                return "a " + _name + " (" + FirstId + ")";
+            }
+        }
+
+        // defines Description property
+        public string Description {
+            get {
+                return _description;
+            }
+        }
+
         // defines FirstId property
         public string FirstId {
             get {
@@ -37,13 +49,27 @@ namespace SwinAdventure {
             }
         }
 
-        // defines  ShortDescription property
-        public string ShortDescription {
-            get {
-                return ()
+        // defines AreYou method
+        public bool AreYou(string id) {
+            return _identifiers.Contains(id.ToLower());;
+        }
+
+        // defines AddIdentifier method
+        public void AddIdentifier(string id) {
+            _identifiers.Add(id.ToLower());
+        }
+
+        // defines RemoveIdentifier method
+        public void RemoveIdentifier(string id) {
+            _identifiers.Remove(id.ToLower());
+        }
+
+        // defines PrivilegeEscalation method
+        public void PrivilegeEscalation(string pin) {
+            if (pin == "1089") {
+                _identifiers[0] = "20007";
             }
         }
 
-        // defines AreYou method
     }
 }

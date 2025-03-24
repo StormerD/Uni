@@ -1,5 +1,4 @@
-﻿using Newtonsoft.Json.Bson;
-using NUnit.Framework.Legacy;
+﻿using NUnit.Framework.Legacy;
 namespace SwinAdventure {
     public class IdentifiableObjectTest {
 
@@ -25,6 +24,8 @@ namespace SwinAdventure {
         private IdentifiableObject _test5Object;
         // TEST 6
         private string _test6String;
+        private string _test6String2;
+        private string _test6String3;
         private string[] _test6Array;
         private IdentifiableObject _test6Object;
         // TEST 7
@@ -56,6 +57,8 @@ namespace SwinAdventure {
             _test5Object = new IdentifiableObject(_test5Array);
             // TEST 6
             _test6String = "Tom";
+            _test6String2 = "dylan";
+            _test6String3 = "jack";
             _test6Array = new string[] { "Dylan", "Jack", "Leo" };
             _test6Object = new IdentifiableObject(_test6Array);
             // TEST 7
@@ -101,7 +104,14 @@ namespace SwinAdventure {
             ClassicAssert.False(_test7Object.AreYou(_test7String));
             _test7Object.PrivilegeEscalation("1089");
             ClassicAssert.True(_test7Object.AreYou(_test7String));
-            
+        }
+
+        [Test] // TEST 8: pass if id is removed
+        public void TestRemoveId() {
+            ClassicAssert.True(_test6Object.AreYou(_test6String2));
+            _test6Object.RemoveIdentifier(_test6String2);
+            ClassicAssert.False(_test6Object.AreYou(_test6String2));
+            Assert.That(_test6Object.FirstId, Is.EqualTo(_test6String3));
         }
     }
 }

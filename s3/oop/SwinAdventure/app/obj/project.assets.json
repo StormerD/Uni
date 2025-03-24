@@ -8,19 +8,19 @@
     "net9.0": []
   },
   "packageFolders": {
-    "C:\\Users\\D\\.nuget\\packages\\": {}
+    "C:\\Users\\drodw\\.nuget\\packages\\": {}
   },
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "C:\\Users\\D\\OneDrive\\Desktop\\shortcuts\\uni\\s3\\oop\\SwinAdventure\\app\\app.csproj",
+      "projectUniqueName": "C:\\users\\drodw\\OneDrive\\Desktop\\shortcuts\\uni\\s3\\oop\\SwinAdventure\\app\\app.csproj",
       "projectName": "app",
-      "projectPath": "C:\\Users\\D\\OneDrive\\Desktop\\shortcuts\\uni\\s3\\oop\\SwinAdventure\\app\\app.csproj",
-      "packagesPath": "C:\\Users\\D\\.nuget\\packages\\",
-      "outputPath": "C:\\Users\\D\\OneDrive\\Desktop\\shortcuts\\uni\\s3\\oop\\SwinAdventure\\app\\obj\\",
+      "projectPath": "C:\\users\\drodw\\OneDrive\\Desktop\\shortcuts\\uni\\s3\\oop\\SwinAdventure\\app\\app.csproj",
+      "packagesPath": "C:\\Users\\drodw\\.nuget\\packages\\",
+      "outputPath": "C:\\users\\drodw\\OneDrive\\Desktop\\shortcuts\\uni\\s3\\oop\\SwinAdventure\\app\\obj\\",
       "projectStyle": "PackageReference",
       "configFilePaths": [
-        "C:\\Users\\D\\AppData\\Roaming\\NuGet\\NuGet.Config"
+        "C:\\Users\\drodw\\AppData\\Roaming\\NuGet\\NuGet.Config"
       ],
       "originalTargetFrameworks": [
         "net9.0"
