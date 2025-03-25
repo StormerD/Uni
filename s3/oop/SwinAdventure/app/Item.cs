@@ -1,4 +1,13 @@
 namespace SwinAdventure {
+// Item(string[]: identifiers, string: name, string: description)
+// Item.AreYou(string: id): bool
+// Item.AddIdentifier(string: id)
+// Item.RemoveIdentifier(string: id)
+// Item.PrivilegeEscalation(string: pin)
+// Item.Name
+// Item.ShortDescription
+// Item.Description
+// Item.FirstId
     public class Item {
         // fields
         private List<string> _identifiers;
@@ -14,6 +23,28 @@ namespace SwinAdventure {
             }
             _name = name;
             _description = desc;
+        }
+
+        // defines AreYou method
+        public bool AreYou(string id) {
+            return _identifiers.Contains(id.ToLower());
+        }
+
+        // defines AddIdentifier method
+        public void AddIdentifier(string id) {
+            _identifiers.Add(id.ToLower());
+        }
+
+        // defines RemoveIdentifier method
+        public void RemoveIdentifier(string id) {
+            _identifiers.Remove(id.ToLower());
+        }
+
+        // defines PrivilegeEscalation method
+        public void PrivilegeEscalation(string pin) {
+            if (pin == "1089") {
+                _identifiers[0] = "20007";
+            }
         }
 
         // defines Name property
@@ -48,28 +79,5 @@ namespace SwinAdventure {
                 }
             }
         }
-
-        // defines AreYou method
-        public bool AreYou(string id) {
-            return _identifiers.Contains(id.ToLower());;
-        }
-
-        // defines AddIdentifier method
-        public void AddIdentifier(string id) {
-            _identifiers.Add(id.ToLower());
-        }
-
-        // defines RemoveIdentifier method
-        public void RemoveIdentifier(string id) {
-            _identifiers.Remove(id.ToLower());
-        }
-
-        // defines PrivilegeEscalation method
-        public void PrivilegeEscalation(string pin) {
-            if (pin == "1089") {
-                _identifiers[0] = "20007";
-            }
-        }
-
     }
 }

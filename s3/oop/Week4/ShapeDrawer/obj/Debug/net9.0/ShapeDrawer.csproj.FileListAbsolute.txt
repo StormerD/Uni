@@ -1,0 +1,15 @@
+C:\Users\drodw\OneDrive\Desktop\shortcuts\uni\s3\oop\Week4\ShapeDrawer\bin\Debug\net9.0\ShapeDrawer.exe
+C:\Users\drodw\OneDrive\Desktop\shortcuts\uni\s3\oop\Week4\ShapeDrawer\bin\Debug\net9.0\ShapeDrawer.deps.json
+C:\Users\drodw\OneDrive\Desktop\shortcuts\uni\s3\oop\Week4\ShapeDrawer\bin\Debug\net9.0\ShapeDrawer.runtimeconfig.json
+C:\Users\drodw\OneDrive\Desktop\shortcuts\uni\s3\oop\Week4\ShapeDrawer\bin\Debug\net9.0\ShapeDrawer.dll
+C:\Users\drodw\OneDrive\Desktop\shortcuts\uni\s3\oop\Week4\ShapeDrawer\bin\Debug\net9.0\ShapeDrawer.pdb
+C:\Users\drodw\OneDrive\Desktop\shortcuts\uni\s3\oop\Week4\ShapeDrawer\obj\Debug\net9.0\ShapeDrawer.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\drodw\OneDrive\Desktop\shortcuts\uni\s3\oop\Week4\ShapeDrawer\obj\Debug\net9.0\ShapeDrawer.AssemblyInfoInputs.cache
+C:\Users\drodw\OneDrive\Desktop\shortcuts\uni\s3\oop\Week4\ShapeDrawer\obj\Debug\net9.0\ShapeDrawer.AssemblyInfo.cs
+C:\Users\drodw\OneDrive\Desktop\shortcuts\uni\s3\oop\Week4\ShapeDrawer\obj\Debug\net9.0\ShapeDrawer.csproj.CoreCompileInputs.cache
+C:\Users\drodw\OneDrive\Desktop\shortcuts\uni\s3\oop\Week4\ShapeDrawer\obj\Debug\net9.0\ShapeDrawer.sourcelink.json
+C:\Users\drodw\OneDrive\Desktop\shortcuts\uni\s3\oop\Week4\ShapeDrawer\obj\Debug\net9.0\ShapeDrawer.dll
+C:\Users\drodw\OneDrive\Desktop\shortcuts\uni\s3\oop\Week4\ShapeDrawer\obj\Debug\net9.0\refint\ShapeDrawer.dll
+C:\Users\drodw\OneDrive\Desktop\shortcuts\uni\s3\oop\Week4\ShapeDrawer\obj\Debug\net9.0\ShapeDrawer.pdb
+C:\Users\drodw\OneDrive\Desktop\shortcuts\uni\s3\oop\Week4\ShapeDrawer\obj\Debug\net9.0\ShapeDrawer.genruntimeconfig.cache
+C:\Users\drodw\OneDrive\Desktop\shortcuts\uni\s3\oop\Week4\ShapeDrawer\obj\Debug\net9.0\ref\ShapeDrawer.dll
