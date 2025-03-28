@@ -5,17 +5,23 @@ namespace ShapeDrawer {
         // fields
         private Color _color;
         private float _x;
+        private float _xc;
         private float _y;
+        private float _yc;
+        private float _r;
         private int _width;
         private int _height;
 
         // defines Shape constructor
-        public Shape(int param) {
+        public Shape(int param, float x, float y) {
             _color = Color.Azure;
-            _x = 0.0f;
-            _y = 0.0f;
             _width = param;
             _height = param;
+            _x = x;
+            _y = y;
+            _r = _width/2;
+            _xc = _x + _r;
+            _yc = _y + _r;
         }
 
         // defines Color property
@@ -68,9 +74,21 @@ namespace ShapeDrawer {
             }
         }
 
-        // defines Draw method
-        public void Draw() {
+        // defines DrawRectangle method
+        public void DrawRectangle() {
             SplashKit.FillRectangle(_color, _x, _y, _width, _height);
+        }
+
+        // defines DrawEllipse method
+        public void DrawEllipse() {
+            SplashKit.FillEllipse(_color, _x, _y, _width, _height);
+        }
+
+        // defines InEllipse method
+        public bool InEllipse(float mx, float my) {
+            float dx = _xc - mx;
+            float dy = _yc - my;
+            return dx * dx + dy * dy <= (_r+25) * (_r+25);
         }
 
         // defines IsAt method

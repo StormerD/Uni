@@ -10,10 +10,15 @@ namespace ShapeDrawer {
 
             // variables
             Shape myShape;
+            Shape myTestEllipse;
+            Shape myEllipse;
             Point2D mousePos;
 
             // setup variables
-            myShape = new Shape(189);
+            myShape = new Shape(189, 0, 0);
+            myTestEllipse = new Shape(150, 75, 75);
+            myTestEllipse.Color = Color.Red;
+            myEllipse = new Shape(100, 100, 100);
             mousePos = new Point2D(SplashKit.MouseX(), SplashKit.MouseY());
 
             do {
@@ -25,14 +30,15 @@ namespace ShapeDrawer {
                 mousePos.X = SplashKit.MouseX();
                 mousePos.Y = SplashKit.MouseY();
 
-                // draw myShape
-                myShape.Draw();
-
+                // draw shapes
+                myShape.DrawRectangle();
+                myTestEllipse.DrawEllipse();
+                myEllipse.DrawEllipse();
 
                 // mouse_click event
                 if (SplashKit.MouseClicked(MouseButton.LeftButton)) {
-                    myShape.X = SplashKit.MouseX();
-                    myShape.Y = SplashKit.MouseY();
+                    myShape.X = mousePos.X;
+                    myShape.Y = mousePos.Y;
                 }
 
                 // key_pressed(space) && mouse_over(object) event
@@ -40,8 +46,17 @@ namespace ShapeDrawer {
                     myShape.Color = SplashKit.RandomColor();
                 }
 
-                // draw myShape
-                myShape.Draw();
+                // 
+                if (myEllipse.InEllipse(mousePos.X, mousePos.Y)) {
+                    myEllipse.Color = Color.Blue;
+                }
+                if (!myEllipse.InEllipse(mousePos.X, mousePos.Y)) {
+                    myEllipse.Color = Color.Azure;
+                }
+
+                // draw shapes
+                myShape.DrawRectangle();
+                myEllipse.DrawEllipse();
                 
                 // refresh screen
                 SplashKit.RefreshScreen();

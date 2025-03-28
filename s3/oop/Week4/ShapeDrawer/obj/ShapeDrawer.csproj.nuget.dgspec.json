@@ -1,17 +1,17 @@
 {
   "format": 1,
   "restore": {
-    "C:\\Users\\drodw\\OneDrive\\Desktop\\shortcuts\\uni\\s3\\oop\\Week4\\ShapeDrawer\\ShapeDrawer.csproj": {}
+    "C:\\Users\\drodw\\OneDrive\\Desktop\\shortcuts\\uni\\s3\\oop\\week4\\ShapeDrawer\\ShapeDrawer.csproj": {}
   },
   "projects": {
-    "C:\\Users\\drodw\\OneDrive\\Desktop\\shortcuts\\uni\\s3\\oop\\Week4\\ShapeDrawer\\ShapeDrawer.csproj": {
+    "C:\\Users\\drodw\\OneDrive\\Desktop\\shortcuts\\uni\\s3\\oop\\week4\\ShapeDrawer\\ShapeDrawer.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "C:\\Users\\drodw\\OneDrive\\Desktop\\shortcuts\\uni\\s3\\oop\\Week4\\ShapeDrawer\\ShapeDrawer.csproj",
+        "projectUniqueName": "C:\\Users\\drodw\\OneDrive\\Desktop\\shortcuts\\uni\\s3\\oop\\week4\\ShapeDrawer\\ShapeDrawer.csproj",
         "projectName": "ShapeDrawer",
-        "projectPath": "C:\\Users\\drodw\\OneDrive\\Desktop\\shortcuts\\uni\\s3\\oop\\Week4\\ShapeDrawer\\ShapeDrawer.csproj",
+        "projectPath": "C:\\Users\\drodw\\OneDrive\\Desktop\\shortcuts\\uni\\s3\\oop\\week4\\ShapeDrawer\\ShapeDrawer.csproj",
         "packagesPath": "C:\\Users\\drodw\\.nuget\\packages\\",
-        "outputPath": "C:\\Users\\drodw\\OneDrive\\Desktop\\shortcuts\\uni\\s3\\oop\\Week4\\ShapeDrawer\\obj\\",
+        "outputPath": "C:\\Users\\drodw\\OneDrive\\Desktop\\shortcuts\\uni\\s3\\oop\\week4\\ShapeDrawer\\obj\\",
         "projectStyle": "PackageReference",
         "configFilePaths": [
           "C:\\Users\\drodw\\AppData\\Roaming\\NuGet\\NuGet.Config"
