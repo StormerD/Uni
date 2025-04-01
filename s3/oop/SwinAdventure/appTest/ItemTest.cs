@@ -22,7 +22,7 @@ namespace SwinAdventure {
 
         [Test] // TEST 3: pass if returns full description
         public void TestFullDescription() {
-            Assert.That(_bronze_Sword.Description, Is.EqualTo("a sharp bronze sword used to slay monsters"));
+            Assert.That(_bronze_Sword.FullDescription, Is.EqualTo("a sharp bronze sword used to slay monsters"));
         }
 
         [Test] // TEST 4: pass if first id is course id

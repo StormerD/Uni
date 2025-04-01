@@ -1,9 +1,11 @@
 namespace SwinAdventure {
 // Inventory()
-// Inventory.HasItem(string: id): bool
-// Inventory.Put(Item: itm)
-// Inventory.Fetch(string: id): Item / Null
-// Inventory.Take(string: id): Item / Null
+// HasItem(string: id): bool
+// Put(Item: itm)
+// Put_UniqueItem(Item: itm)
+// Fetch(string: id): Item / Null
+// Take(string: id): Item / Null
+// ItemList: string
     public class Inventory {
         // fields
         private List<Item> _items;

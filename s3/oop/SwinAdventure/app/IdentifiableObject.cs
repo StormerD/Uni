@@ -1,3 +1,10 @@
+// IdentifiableObject(string[]: idents)
+// AreYou(string: id): bool
+// AddIdentifier(string: id)
+// RemoveIdentifier(string: id)
+// PrivilegeEscalation(string: pin)
+// FirstID: string
+
 namespace SwinAdventure {
     public class IdentifiableObject {
         // fields
@@ -9,19 +16,6 @@ namespace SwinAdventure {
             // add identifiers to the IdentifiableObject
             foreach (string ident in idents) {
                 AddIdentifier(ident);
-            }
-        }
-
-        // defines FirstId property
-        // returns first identifier
-        public string FirstId {
-            get {
-                if (_identifiers.Count == 0) {
-                    return "";
-                }
-                else {
-                    return _identifiers.First();
-                }
             }
         }
 
@@ -49,5 +43,19 @@ namespace SwinAdventure {
                 _identifiers[0] = "20007";
             }
         }
+        
+        // defines FirstId property
+        // returns first identifier
+        public string FirstId {
+            get {
+                if (_identifiers.Count == 0) {
+                    return "";
+                }
+                else {
+                    return _identifiers.First();
+                }
+            }
+        }
     }
+    
 }

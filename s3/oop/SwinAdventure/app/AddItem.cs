@@ -1,3 +1,7 @@
+// AddItem(Item[]: items)
+// AddToList(Item: newItem)
+// CheckInList(Item: newItem): bool
+
 namespace SwinAdventure {
     public class AddItem {
         // fields

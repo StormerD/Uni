@@ -1,4 +1,4 @@
-linked file
+# linked file
 require './input_functions'
 
 # define Genre module
