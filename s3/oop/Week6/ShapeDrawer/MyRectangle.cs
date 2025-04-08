@@ -1,6 +1,6 @@
 using SplashKitSDK;
 
 namespace ShapeDrawer {
-  public class MyRectangle : Shape{
+  public class MyRectangle : Shape {
   }
 }

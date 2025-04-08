@@ -43,3 +43,11 @@ C:\Users\drodw\Desktop\organiser\Uni\s3\oop\Week6\ShapeDrawer\bin\Debug\net9.0\S
 C:\Users\drodw\Desktop\organiser\Uni\s3\oop\Week6\ShapeDrawer\bin\Debug\net9.0\ShapeDrawer.pdb
 C:\Users\drodw\Desktop\organiser\Uni\s3\oop\Week6\ShapeDrawer\obj\Debug\net9.0\ShapeDrawer.genruntimeconfig.cache
 C:\Users\drodw\Desktop\organiser\Uni\s3\oop\Week6\ShapeDrawer\obj\Debug\net9.0\ref\ShapeDrawer.dll
+C:\Users\D\Desktop\organiser\Uni\s3\oop\Week6\ShapeDrawer\obj\Debug\net9.0\ShapeDrawer.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\D\Desktop\organiser\Uni\s3\oop\Week6\ShapeDrawer\obj\Debug\net9.0\ShapeDrawer.AssemblyInfoInputs.cache
+C:\Users\D\Desktop\organiser\Uni\s3\oop\Week6\ShapeDrawer\obj\Debug\net9.0\ShapeDrawer.AssemblyInfo.cs
+C:\Users\D\Desktop\organiser\Uni\s3\oop\Week6\ShapeDrawer\obj\Debug\net9.0\ShapeDrawer.csproj.CoreCompileInputs.cache
+C:\Users\D\Desktop\organiser\Uni\s3\oop\Week6\ShapeDrawer\obj\Debug\net9.0\ShapeDrawer.sourcelink.json
+C:\Users\D\Desktop\organiser\Uni\s3\oop\Week6\ShapeDrawer\obj\Debug\net9.0\ShapeDrawer.dll
+C:\Users\D\Desktop\organiser\Uni\s3\oop\Week6\ShapeDrawer\obj\Debug\net9.0\refint\ShapeDrawer.dll
+C:\Users\D\Desktop\organiser\Uni\s3\oop\Week6\ShapeDrawer\obj\Debug\net9.0\ShapeDrawer.pdb

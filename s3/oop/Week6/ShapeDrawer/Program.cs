@@ -35,11 +35,31 @@ namespace ShapeDrawer {
                 _mousePos.X = SplashKit.MouseX();
                 _mousePos.Y = SplashKit.MouseY();
 
+                // event on_key_R
+                if (SplashKit.KeyTyped(KeyCode.RKey)) {
+                    _kindToAdd = ShapeKind.Rectangle;
+                }
+                
+                // event on_key_C
+                if (SplashKit.KeyTyped(KeyCode.CKey)) {
+                    _kindToAdd = ShapeKind.Circle;
+                }
+
                 // event on_click__LEFT
                 if (SplashKit.MouseClicked(MouseButton.LeftButton)) {
-                    Shape newShape = new MyRectangle();
+                    Shape newShape;
+                    switch (_kindToAdd) {
+                        case ShapeKind.Circle:
+                            newShape = new MyCircle();
+                            break;
+                        
+                        default:
+                            newShape = new myRectangle();
+                            break;
+                            
+                    }
                     newShape.X = _mousePos.X;
-                    newShape.Y = _mousePos.Y;
+                    newshape.Y = _mousePos.Y;
                     _shapeList.Add(newShape);
                     _myDrawing.AddShape(newShape);
                     Console.WriteLine("Left MB");
