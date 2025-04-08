@@ -6,7 +6,8 @@ namespace ShapeDrawer {
 
         private enum ShapeKind {
             Rectangle,
-            Circle
+            Circle,
+            Line
         }
         public static void Main() {
 
@@ -45,24 +46,46 @@ namespace ShapeDrawer {
                     _kindToAdd = ShapeKind.Circle;
                 }
 
+                // event on_key_L
+                if (SplashKit.KeyTyped(KeyCode.LKey)) {
+                    _kindToAdd = ShapeKind.Line;
+                }
+
                 // event on_click__LEFT
                 if (SplashKit.MouseClicked(MouseButton.LeftButton)) {
-                    Shape newShape;
-                    switch (_kindToAdd) {
-                        case ShapeKind.Circle:
-                            newShape = new MyCircle();
-                            break;
-                        
-                        default:
-                            newShape = new myRectangle();
-                            break;
-                            
+                    if (_kindToAdd == ShapeKind.Line) {
+                        int i = 0;
+                        int j = 0;
+                        while (i < 9) {
+                            Shape newLine = new MyLine();
+                            float _posY = _mousePos.Y + j;
+                            newLine.X = _mousePos.X;
+                            newLine.Y = _posY;
+                            _shapeList.Add(newLine);
+                            _myDrawing.AddShape(newLine);
+                            j += 10;
+                            i += 1;
+                            Console.WriteLine("Left MB");
+                        }
                     }
-                    newShape.X = _mousePos.X;
-                    newshape.Y = _mousePos.Y;
-                    _shapeList.Add(newShape);
-                    _myDrawing.AddShape(newShape);
-                    Console.WriteLine("Left MB");
+                    else {
+                        Shape newShape;
+                        switch (_kindToAdd) {
+                            case ShapeKind.Circle:
+                                newShape = new MyCircle();
+                                break;
+                            
+                            default:
+                                newShape = new MyRectangle();
+                                break;
+                                
+                        }
+                        newShape.X = _mousePos.X;
+                        newShape.Y = _mousePos.Y;
+                        _shapeList.Add(newShape);
+                        _myDrawing.AddShape(newShape);
+                        Console.WriteLine("Left MB");
+                    }
                 }
 
                 // event on_click_RIGHT

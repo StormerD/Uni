@@ -2,21 +2,41 @@ using SplashKitSDK;
 
 namespace ShapeDrawer {
   public class MyCircle : Shape {
-    // fields
+    // FIELDS
     private int _radius;
-    // defines MyCircle constructor
-    public MyCircle() {
-      _radius = 50;
+
+    // CONSTRUCTORS
+    public MyCircle(Color color, int radius) : base(color) {
+      _radius = radius;
     }
 
+    public MyCircle() : this(Color.Blue, 139) {}
+
+    // METHODS
     public override void Draw() {
-      if (_selected) {
+      if (Selected) {
         DrawOutline();
       }
       SplashKit.FillCircle(Color, X, Y, _radius);
     }
 
-    // defines Radius property
+    public override void DrawOutline() {
+      Color bColor = Color.Black;
+      SplashKit.FillCircle(bColor, X, Y, _radius + 4);
+    }
+
+    public override bool IsAt(Point2D pt) {
+      double _dx = X - pt.X;
+      double _dy = Y - pt.Y;
+      if (_dx*_dx+_dy*_dy <= _radius*_radius) {
+        return true;
+      }
+      else {
+        return false;
+      }
+    }
+
+    // PROPERTIES
     public int Radius {
       get {
         return _radius;
