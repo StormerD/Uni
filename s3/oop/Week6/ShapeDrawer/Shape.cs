@@ -78,21 +78,22 @@ namespace ShapeDrawer {
         }
 
         // defines DrawRectangle method
-        public void Draw() {
+        public virtual void Draw() {
             SplashKit.FillRectangle(_color, _x, _y, _width, _height);
             if (_selected) {
                 DrawOutline();
             }
+            SplashKit.FillRectangle(_color, _x, _y, _width, _height);
         }
 
         // defines DrawOutline method
-        public void DrawOutline() {
-            Color rColor = Color.Black;
-            float rX = _x-9;
-            float rY = _y-9;
-            int rWidth = _width+18;
-            int rHeight = _height+18;
-            SplashKit.DrawRectangle(rColor, rX, rY, rWidth, rHeight);
+        public virtual void DrawOutline() {
+            Color bColor = Color.Black;
+            float bX = _x-9;
+            float bY = _y-9;
+            int bWidth = _width+18;
+            int bHeight = _height+18;
+            SplashKit.DrawRectangle(bColor, bX, bY, bWidth, bHeight);
         }
 
         // defines IsAt method

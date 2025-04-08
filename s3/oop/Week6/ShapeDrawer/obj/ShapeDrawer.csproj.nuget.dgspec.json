@@ -1,17 +1,17 @@
 {
   "format": 1,
   "restore": {
-    "C:\\Users\\D\\Desktop\\organiser\\Uni\\s3\\oop\\Week6\\ShapeDrawer\\ShapeDrawer.csproj": {}
+    "C:\\Users\\D\\Desktop\\organiser\\Uni\\s3\\oop\\week6\\ShapeDrawer\\ShapeDrawer.csproj": {}
   },
   "projects": {
-    "C:\\Users\\D\\Desktop\\organiser\\Uni\\s3\\oop\\Week6\\ShapeDrawer\\ShapeDrawer.csproj": {
+    "C:\\Users\\D\\Desktop\\organiser\\Uni\\s3\\oop\\week6\\ShapeDrawer\\ShapeDrawer.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "C:\\Users\\D\\Desktop\\organiser\\Uni\\s3\\oop\\Week6\\ShapeDrawer\\ShapeDrawer.csproj",
+        "projectUniqueName": "C:\\Users\\D\\Desktop\\organiser\\Uni\\s3\\oop\\week6\\ShapeDrawer\\ShapeDrawer.csproj",
         "projectName": "ShapeDrawer",
-        "projectPath": "C:\\Users\\D\\Desktop\\organiser\\Uni\\s3\\oop\\Week6\\ShapeDrawer\\ShapeDrawer.csproj",
+        "projectPath": "C:\\Users\\D\\Desktop\\organiser\\Uni\\s3\\oop\\week6\\ShapeDrawer\\ShapeDrawer.csproj",
         "packagesPath": "C:\\Users\\D\\.nuget\\packages\\",
-        "outputPath": "C:\\Users\\D\\Desktop\\organiser\\Uni\\s3\\oop\\Week6\\ShapeDrawer\\obj\\",
+        "outputPath": "C:\\Users\\D\\Desktop\\organiser\\Uni\\s3\\oop\\week6\\ShapeDrawer\\obj\\",
         "projectStyle": "PackageReference",
         "configFilePaths": [
           "C:\\Users\\D\\AppData\\Roaming\\NuGet\\NuGet.Config"
