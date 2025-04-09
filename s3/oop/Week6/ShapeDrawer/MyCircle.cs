@@ -10,7 +10,7 @@ namespace ShapeDrawer {
       _radius = radius;
     }
 
-    public MyCircle() : this(Color.Blue, 139) {}
+    public MyCircle() : this(Color.Blue, 50 + 89) {}
 
     // METHODS
     public override void Draw() {
@@ -30,8 +30,7 @@ namespace ShapeDrawer {
       double _dy = Y - pt.Y;
       if (_dx*_dx+_dy*_dy <= _radius*_radius) {
         return true;
-      }
-      else {
+      } else {
         return false;
       }
     }
@@ -40,8 +39,7 @@ namespace ShapeDrawer {
     public int Radius {
       get {
         return _radius;
-      }
-      set {
+      } set {
         _radius = value;
       }
     }

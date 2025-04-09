@@ -35,8 +35,7 @@ namespace ShapeDrawer {
       public override bool IsAt(Point2D pt) {
       if (pt.X > X && pt.Y > Y && pt.X < (X+_width) && pt.Y < (Y+_height)) {
         return true;
-      }
-      else {
+      } else {
         return false;
       }
     }
@@ -45,8 +44,7 @@ namespace ShapeDrawer {
     public int Width {
       get {
         return _width;
-      }
-      set {
+      } set {
         _width = value;
       }
     }
@@ -54,8 +52,7 @@ namespace ShapeDrawer {
     public int Height {
       get {
         return _height;
-      }
-      set {
+      } set {
         _height = value;
       }
     }
