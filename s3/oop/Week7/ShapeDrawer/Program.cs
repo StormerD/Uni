@@ -34,19 +34,19 @@ namespace ShapeDrawer {
         // EVENT on_key_R
         if (SplashKit.KeyTyped(KeyCode.RKey)) {
           _kindToAdd = ShapeKind.Rectangle;
-          Console.WriteLine("Key R");
+          Console.WriteLine("Rectangle Selected!");
         }
 
         // EVENT on_key_C
         if (SplashKit.KeyTyped(KeyCode.CKey)) {
           _kindToAdd = ShapeKind.Circle;
-          Console.WriteLine("Key C");
+          Console.WriteLine("Circle Selected!");
         }
 
         // EVENT on_key_L
         if (SplashKit.KeyTyped(KeyCode.LKey)) {
           _kindToAdd = ShapeKind.Line;
-          Console.WriteLine("Key L");
+          Console.WriteLine("Line Selected!");
         }
 
         // EVENT on_click_LEFT
@@ -77,19 +77,17 @@ namespace ShapeDrawer {
             newShape.Y = _mousePos.Y;
             _myDrawing.AddShape(newShape);
           }
-          Console.WriteLine("MB Left");
         }
 
         // EVENT on_click_RIGHT
         if (SplashKit.MouseClicked(MouseButton.RightButton)) {
           _myDrawing.SelectShapesAt(_mousePos);
-          Console.WriteLine("MB Right");
         }
 
         // EVENT on_key_SPACE
         if (SplashKit.KeyTyped(KeyCode.SpaceKey)) {
           _myDrawing.Background = SplashKit.RandomColor();
-          Console.WriteLine("Key Space");
+          Console.WriteLine("New Background!");
         }
 
         // EVENT on_key_DELETE
@@ -97,7 +95,6 @@ namespace ShapeDrawer {
           foreach (Shape s in _myDrawing.SelectedShapes) {
             _myDrawing.RemoveShape(s);
           }
-          Console.WriteLine("Key Delete");
         }
 
         // EVENT on_key_BACKSPACE
@@ -109,18 +106,19 @@ namespace ShapeDrawer {
           else {
             Console.WriteLine("No shape to delete");
           }
-          Console.WriteLine("Key Backspace");
         }
 
         // EVENT on_key_S
         if (SplashKit.KeyTyped(KeyCode.SKey)) {
           _myDrawing.Save("/Users/drodw/Desktop/TestDrawing.txt");
+          Console.WriteLine("Drawing Saved!");
         }
 
         // // EVENT on_key_O
         if (SplashKit.KeyTyped(KeyCode.OKey)) {
           try {
           _myDrawing.Load("/Users/drodw/Desktop/TestDrawing.txt");
+          Console.WriteLine("Drawing Loaded!");
           }
           catch (Exception e) {
             Console.Error.WriteLine("Error loading file {0}: " + e.Message);

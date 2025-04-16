@@ -6,6 +6,9 @@ namespace ShapeDrawer {
     private readonly List<Shape> _shapes;
     private Color _background;
 
+    StreamReader reader;
+    StreamWriter writer;
+
     // CONSTRUCTORS
     public Drawing(Color background) {
       _shapes = new List<Shape>();
@@ -41,28 +44,29 @@ namespace ShapeDrawer {
     }
 
     public void Save(string filename) {
-      StreamWriter writer;
-
       writer = new StreamWriter(filename);
-      writer.WriteColor(_background);
-      writer.WriteLine(ShapeCount);
 
-      foreach (Shape s in _shapes) {
-        s.SaveTo(writer);
+      try {
+        writer.WriteColor(_background);
+        writer.WriteLine(ShapeCount);
+
+        foreach (Shape s in _shapes) {
+          s.SaveTo(writer);
+        }
       }
-
-      writer.Close();
+      finally {
+        writer.Close();
+      }
     }
 
     public void Load(string filename) {
-      StreamReader reader;
-      int count;
-      Shape s;
-      string kind;
-      int j = 0;
-      
       reader = new StreamReader(filename);
       try {
+        int count;
+        Shape s;
+        string kind;
+        int j = 0;
+      
         Background = reader.ReadColor();
         count = reader.ReadInteger();
         _shapes.Clear();
