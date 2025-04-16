@@ -120,9 +120,15 @@ namespace ShapeDrawer {
       }
     }
 
-    public Shape LastShape {
+    public Shape? LastShape {
       get {
-        return _shapes.Last();
+        try {
+          return _shapes.Last();
+        }
+        catch (Exception e) {
+          Console.Error.WriteLine("Error: no shapes in list {0}" + e.Message);
+          return null;
+        }
       }
     }
   }

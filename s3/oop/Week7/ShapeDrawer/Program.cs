@@ -15,7 +15,6 @@ namespace ShapeDrawer {
       // VARIABLES
       Drawing _myDrawing;
       Point2D _mousePos;
-      Shape _lastShape;
       ShapeKind _kindToAdd;
 
       // SETUP VARIABLES
@@ -103,8 +102,13 @@ namespace ShapeDrawer {
 
         // EVENT on_key_BACKSPACE
         if (SplashKit.KeyTyped(KeyCode.BackspaceKey)) {
-          Console.WriteLine("Deleting Shape: " + _myDrawing.LastShape.Type);
-          _myDrawing.RemoveShape(_myDrawing.LastShape);
+          if (_myDrawing.LastShape != null) {
+            Console.WriteLine("Deleting Shape: " + _myDrawing.LastShape.Type);
+            _myDrawing.RemoveShape(_myDrawing.LastShape);
+          }
+          else {
+            Console.WriteLine("No shape to delete");
+          }
           Console.WriteLine("Key Backspace");
         }
 
