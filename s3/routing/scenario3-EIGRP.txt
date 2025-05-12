@@ -1,0 +1,26 @@
+// vlan 89
+network 131.9.0.0 0.0.1.255
+
+// vlan 341
+network 131.9.2.0 0.0.0.255
+
+// vlan 112
+network 131.9.3.0 0.0.0.63
+
+// vlan 1 (kunri)
+network 131.9.3.64 0.0.0.31
+
+// loopback0
+network 131.9.3.96 0.0.0.31
+
+// vlan 1 (mithi)
+network 131.9.3.128 0.0.0.7
+
+// link 1
+network 131.9.3.136 0.0.0.3
+
+// link 2
+network 131.9.3.40 0.0.0.3
+
+// link 3
+network 131.9.3.44 0.0.0.3

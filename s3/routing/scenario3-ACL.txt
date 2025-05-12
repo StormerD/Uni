@@ -1,0 +1,31 @@
+- - - Scenario 3 Access Control List - - -
+
+--  generic_VLAN89 RULES  --
+- PCs in VLAN89 permitted HTTP access to Loopback0
+- deny all other access to Loopback0
+- PCs in VLAN89 permitted all other access to the internet
+
+--  generic_VLAN89  --
+no ip access-list extended generic_VLAN89
+ip access-list extended generic_VLAN89
+permit tcp 131.9.0.0 0.0.1.255 host 143.18.0.1 eq 80
+deny ip 131.9.0.0 0.0.1.255 host 143.18.0.1
+permit any any
+
+--  telnet_Kunri RULES  --
+- only PCs in VLAN89 permitted telnet access to Kunri router
+
+--  telnet_Kunri  --
+no ip access-list standard telnet_Kunri
+ip access-list standard telnet_Kunri
+permit 131.9.0.0 0.0.1.255
+deny any
+
+--  telnet_Badin RULES  --
+- only PCs in VLAN89 denied telnet access to Badin router
+
+--  telnet_Badin  --
+no ip access-list standard telnet_Badin
+ip access-list standard telnet_Badin
+deny 131.9.0.0 0.0.1.255
+permit any

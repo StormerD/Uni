@@ -1,0 +1,19 @@
+- - - Scenario 2 Access Control List - - -
+
+--  ACLVLAN89 RULES  --
+- PCs in VLAN89 denied HTTP access to Loopback0
+- permit all other access to Loopback0
+- PCs in VLAN89 permitted only HTTP access to Loopback1
+- deny all other access to Loopback1
+- PCs in VLAN89 denied all access to Loopback2
+- permit all other traffic through the interface
+
+--  ACLVLAN89  --		
+no ip access-list extended ACLVLAN89
+ip access-list extended ACLVLAN89
+deny tcp 148.9.0.0 0.0.7.255 host 138.80.0.1 eq 80
+permit ip 148.9.0.0 0.0.7.255 host 138.80.0.1
+permit tcp 148.9.0.0 0.0.7.255 host 44.0.0.1 eq 80
+deny ip 148.9.0.0 0.0.7.255 host 44.0.0.1
+deny ip 148.9.0.0 0.0.7.255 host 159.23.0.1
+permit ip any any

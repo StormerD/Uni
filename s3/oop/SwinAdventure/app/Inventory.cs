@@ -82,11 +82,18 @@ namespace SwinAdventure {
         // defines ItemList property
         public string ItemList {
             get {
-                string output = "";
+                string list = String.Empty;
+                // option 1. separate list elements by new line
+                // foreach (Item item in _items) {
+                //     list = list + "\t" + item.ShortDescription + "\n";
+                // }
+                // option 2. separate list elements by commas
+                List<string> ItemDescriptionList = new List<string>();
                 foreach (Item item in _items) {
-                    output += $"\t{item.ShortDescription}";
+                    ItemDescriptionList.Add(item.FullDescription);
                 }
-                return output;
+                list = string.Join(", ", ItemDescriptionList);
+                return list;
             }
         }
     }
