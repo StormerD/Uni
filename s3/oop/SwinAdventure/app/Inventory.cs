@@ -90,7 +90,7 @@ namespace SwinAdventure {
                 // option 2. separate list elements by commas
                 List<string> ItemDescriptionList = new List<string>();
                 foreach (Item item in _items) {
-                    ItemDescriptionList.Add(item.FullDescription);
+                    ItemDescriptionList.Add(item.ShortDescription);
                 }
                 list = string.Join(", ", ItemDescriptionList);
                 return list;

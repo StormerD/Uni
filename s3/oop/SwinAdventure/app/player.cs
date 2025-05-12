@@ -42,7 +42,7 @@ namespace SwinAdventure {
 
     public override string FullDescription {
       get {
-        return $"You are {Name} {base.FullDescription}\n" + "You are carrying: \n" + _inventory.ItemList;
+        return $"You are {Name}, {base.FullDescription}\n" + "You are carrying: " + _inventory.ItemList;
       }
     }
   }

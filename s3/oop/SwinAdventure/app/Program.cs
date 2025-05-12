@@ -2,33 +2,71 @@
 namespace MainProgram {
   class MainClass {
     public static void Main(string[] args) {
+      // set up game conditions
+      bool finished = false;
+      LookCommand cmd = new(new string[] {""});
+
       List<IHaveInventory> myContainers = new List<IHaveInventory>();
 
-      // define player object and add it to containers list
-      Player _testPlayer;
-      _testPlayer = new Player("Dylan", "a warrior");
+      // define player object
+      Player player;
+      player = new Player("Dylan", "a warrior");
 
-      myContainers.Add(_testPlayer);
+      // define a bag
+      Bag bag;
+      bag = new Bag(new string[] {"bag", "leather"}, "Leather Bag", "A leather bag used to store items");
 
-      // define a bag and an item and add the item into the inventory of the bag
-      Bag _testToolBag;
-      _testToolBag = new Bag(new string[] {"bang", "tool"}, "Tools Bag", "A bag that contains tools");
-      Item _testItem1;
-      _testItem1 = new Item(new string[] {"stew", "beef"}, "A Beef Stew", "A hearty beef stew");
+      // define an item
+      Item coin;
+      coin = new Item(new string[] {"coin", "gold"}, "Gold Coin", "A valuable piece of currency");
 
-      _testToolBag.Inventory.Put(_testItem1);
+      // put items in inventories
+      bag.Inventory.Put(coin);
+      bag.Inventory.Put(coin);
+      player.Inventory.Put(bag);
+      player.Inventory.Put(coin);
+
+      // user input loop
+      while (!finished) {
+        Console.WriteLine("Enter a command");
+        string command = Console.ReadLine();
+
+        if (command.ToLower() == "exit") {
+          finished = true;
+          break;
+        }
+
+        string[] split = command.Split(" ");
+
+        Console.WriteLine(cmd.Execute(player, split));
+      } 
+      
+
+      // - - - - - - - - - -
+
+      // Console.WriteLine(player.ShortDescription);
+      // Console.WriteLine(player.FullDescription);
+      // Console.WriteLine(bag.ShortDescription);
+      // Console.WriteLine(bag.FullDescription);
+      // Console.WriteLine(coin.ShortDescription);
+      // Console.WriteLine(coin.FullDescription);
+
+      // - - - - - - - - - -
 
       // add bag to list of containers
-      myContainers.Add(_testToolBag);
+      // myContainers.Add(player);
+      // myContainers.Add(toolBag);
 
       // for loop to print out objects
-      foreach (IHaveInventory container in myContainers) {
-        if (container is Player player) {
-          Console.WriteLine(player.Name);
-        } else if (container is Bag bag) {
-          Console.WriteLine(bag.Name);
-        }
-      }
+      // foreach (IHaveInventory container in myContainers) {
+      //   if (container is Player p) {
+      //     Console.WriteLine(p.Name);
+      //   } else if (container is Bag b) {
+      //     Console.WriteLine(b.Name);
+      //   }
+      // }
+
+      // - - - - - - - - - -
 
       // Console.WriteLine("Hello World!");
 
@@ -51,23 +89,25 @@ namespace MainProgram {
       // }
       // Console.WriteLine(_testPlayer.FullDescription);
 
-      // write PlayerObject to file
-      StreamWriter writer = new StreamWriter("TestPlayer.txt");
-      try {
-        Console.WriteLine("-- Saving Data --");
-        _testPlayer.SaveTo(writer);
-      } finally {
-        writer.Close();
-      }
+      // - - - - - - - - - -
 
       // write PlayerObject to file
-      StreamReader reader = new StreamReader("TestPlayer.txt");
-      try {
-        Console.WriteLine("-- Loading Data --");
-        _testPlayer.LoadFrom(reader);
-      } finally {
-        reader.Close();
-      }
+      // StreamWriter writer = new StreamWriter("TestPlayer.txt");
+      // try {
+      //   Console.WriteLine("-- Saving Data --");
+      //   player.SaveTo(writer);
+      // } finally {
+      //   writer.Close();
+      // }
+
+      // // write PlayerObject to file
+      // StreamReader reader = new StreamReader("TestPlayer.txt");
+      // try {
+      //   Console.WriteLine("-- Loading Data --");
+      //   player.LoadFrom(reader);
+      // } finally {
+      //   reader.Close();
+      // }
     }
   }
 }

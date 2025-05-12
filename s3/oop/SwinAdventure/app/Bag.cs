@@ -28,7 +28,7 @@ namespace SwinAdventure {
 
     public override string FullDescription {
       get {
-        return "In the " + Name + " you can see:\n" + Inventory.ItemList;
+        return "In the " + Name + " you can see: " + Inventory.ItemList;
       }
     }
   }

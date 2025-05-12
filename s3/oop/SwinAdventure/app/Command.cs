@@ -1,11 +1,11 @@
 namespace SwinAdventure {
   public abstract class Command : IdentifiableObject {
-    // Constructor
+    // constructor
     public Command(string[] ids) : base(ids) {
 
     }
 
-    // Properties
+    // methods
     public abstract string Execute(Player p, string[] text);
   }
 }

@@ -39,7 +39,7 @@ namespace SwinAdventure {
 
     [Test]
     public void TestPlayerFullDescription() {
-      Assert.That(_testPlayer.FullDescription, Is.EqualTo("You are Dylan a warrior\nYou are carrying: \na Silver Hat (silver), a Torch (light)"));
+      Assert.That(_testPlayer.FullDescription, Is.EqualTo("You are Dylan, a warrior\nYou are carrying: a Silver Hat (silver), a Torch (light)"));
     }
   }
 }
