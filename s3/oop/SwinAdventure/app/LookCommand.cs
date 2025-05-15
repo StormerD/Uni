@@ -7,18 +7,24 @@ namespace SwinAdventure {
 
     // methods
     public override string Execute(Player p, string[] text) {
+      // check if length valid
       if (text.Length == 3 || text.Length == 5) {
+        // check if 1st word "look"
         if (text[0].ToLower() != "look") {
           return "Error in look input";
         }
+        // check if 2nd word "at"
         if (text[1].ToLower() != "at") {
           return "What do you want to look at?";
         }
+        // check if 3 words
         if (text.Length == 3) {
           IHaveInventory container = p;
           return LookAtIn(text[2], container);
         }
+        // check if 5 words
         if (text.Length == 5) {
+          // check if 4th word "in"
           if (text[3].ToLower() != "in") {
             return "What do you want to look in?";
           }
