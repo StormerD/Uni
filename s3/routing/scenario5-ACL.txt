@@ -1,0 +1,23 @@
+-- Scenario 5 ACL Rules --
+
+- GENVLAN410 -
+no ip access-list extended GENVLAN410
+ip access-list extended GENVLAN410
+permit tcp 14.0.0.0 0.0.7.255 host 148.33.0.1 eq 80
+deny ip 14.0.0.0 0.0.7.255 host 148.33.0.1
+deny icmp 14.0.0.0 0.0.7.255 14.0.9.32 0.0.0.31 echo
+permit icmp 14.0.0.0 0.0.7.255 14.0.9.32 0.0.0.31 echo-reply
+permit ip 14.0.0.0 0.0.7.255 any
+permit ip any any
+
+- TELKORBA -
+no ip access-list standard TELKORBA
+ip access-list standard TELKORBA
+permit 14.0.0.0 0.0.7.255
+deny any
+
+- TELRAIPUR -
+no ip access-list standard TELRAIPUR
+ip access-list standard TELRAIPUR
+deny 14.0.0.0 0.0.7.255
+permit any
