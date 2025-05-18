@@ -2,6 +2,11 @@
 % 105341089
 % 105341089@student.swin.edu.au
 
+% Clear variables and 
+clear
+clc
+clearvars
+
 % - - Cypher 1 - -
 % Define public key.
 n1 = 2407;
