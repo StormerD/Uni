@@ -7,11 +7,17 @@ namespace SwinAdventure {
 
     // methods
     public override string Execute(Player p, string[] text) {
+      // ["look", "at", "inventory"], ["look", "at", "bag", "in", "inventory']
+      // handle single input
       // check if length valid
-      if (text.Length == 3 || text.Length == 5) {
+      if (text.Length == 1 || text.Length == 3 || text.Length == 5) {
         // check if 1st word "look"
         if (text[0].ToLower() != "look") {
           return "Error in look input";
+        }
+        // check if looking at environment
+        if (text.Length == 1) {
+          return p.Location.FullDescription;
         }
         // check if 2nd word "at"
         if (text[1].ToLower() != "at") {
@@ -31,12 +37,13 @@ namespace SwinAdventure {
           IHaveInventory fetchContainer = FetchContainer(p, text[4]);
           if (fetchContainer != null) {
             return LookAtIn(text[2], fetchContainer);
-          } else {
-            return "I can't find the " + text[4];
+          }
+          else {
+            return "I can't find " + text[4] + ".";
           }
         }
       }
-      return "I don't know how to look like that";
+      return "I don't know how to look like that.";
     }
 
     private IHaveInventory FetchContainer(Player p, string containerId) {
@@ -50,9 +57,9 @@ namespace SwinAdventure {
     private string LookAtIn(string thingId, IHaveInventory container) {
       GameObject itm = container.Locate(thingId);
       if (itm == null) {
-        return "I can't find the " + thingId;
+        return "I can't find the " + thingId + ".";
       }
-      return itm.FullDescription;
+      return itm.FullDescription + ".";
     }
   }
 }

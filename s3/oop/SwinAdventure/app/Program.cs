@@ -1,46 +1,129 @@
 ﻿using SwinAdventure;
 namespace MainProgram {
   class MainClass {
+    public static void Space() {
+      Console.WriteLine("- - - - - - - - - -");
+      return;
+    }
     public static void Main(string[] args) {
       // set up game conditions
       bool finished = false;
-      LookCommand cmd = new(new string[] {""});
+      LookCommand lcmd = new(new string[] { "" });
+      MoveCommand mcmd = new(new string[] { "" });
+      string help = "Commands: look, move, help, exit\nLook: 'look at [something] (in [something])\nMove: 'move [direction]\nHelp: 'help'\nExit: 'exit'";
 
       List<IHaveInventory> myContainers = new List<IHaveInventory>();
 
+      // game init
+      Space();
+      Console.WriteLine("Welcome to SwinAdventure!\nSetting up your character...");
+      // - - - - - - - - - - 
+
+      // init locations
+      Location myRoom = new Location("room", "A small room");
+      Location myYard = new Location("yard", "A small grass yard");
+
+      // MY ROOM PATHS
+      SwinAdventure.Path myRoomNorth = new SwinAdventure.Path(new string[] {"north"}, "door", "A wooden door", myRoom, myYard, false);
+      SwinAdventure.Path myRoomEast = new SwinAdventure.Path(new string[] {"east"}, "gate", "A locked metal gate", myRoom, null, true);
+      myRoom.AddPath(myRoomNorth);
+      myRoom.AddPath(myRoomEast);
+      // MY YARD PATHS
+      SwinAdventure.Path myYardSouth = new SwinAdventure.Path(new string[] {"south"}, "door", "A wooden door", myYard, myRoom, false);
+      // - - - - - - - - - -
+
       // define player object
-      Player player;
-      player = new Player("Dylan", "a warrior");
+      string? _pname;
+      string? _pdesc;
+      while (true) {
+        Console.WriteLine("\nName: ");
+        _pname = Console.ReadLine();
+        if (_pname == "") {
+          Console.WriteLine("Please enter a valid name.");
+          continue;
+        }
+        break;
+      }
+      while (true) {
+        Console.WriteLine("Description: ");
+        _pdesc = Console.ReadLine();
+        if (_pdesc == "") {
+          Console.WriteLine("Please enter a valid description.");
+          continue;
+        }
+        break;
+      }
+      Player player = new Player(_pname, _pdesc, myRoom);
+      Console.WriteLine("\nPlayer created!");
+      Console.WriteLine(player.ShortDescription);
+      Space();
+      // - - - - - - - - - - 
 
-      // define a bag
+      // init inventory
       Bag bag;
-      bag = new Bag(new string[] {"bag", "leather"}, "Leather Bag", "A leather bag used to store items");
-
-      // define an item
       Item coin;
-      coin = new Item(new string[] {"coin", "gold"}, "Gold Coin", "A valuable piece of currency");
+      Item sword;
+      Item axe;
+      Item torch;
+      Item waterskin;
 
-      // put items in inventories
-      bag.Inventory.Put(coin);
-      bag.Inventory.Put(coin);
-      player.Inventory.Put(bag);
+      bag = new Bag(new string[] { "bag" }, "Leather Bag", "A leather bag used to store items");
+      coin = new Item(new string[] { "coin", "gold" }, "Gold Coin", "A valuable piece of currency");
+      sword = new Item(new string[] { "sword" }, "Steel Sword", "A sharp steel sword");
+      axe = new Item(new string[] { "axe" }, "Wooden Axe", "A wooden axe used for chopping wood");
+      torch = new Item(new string[] { "torch", "light" }, "Torch", "A torch to light the path");
+      waterskin = new Item(new string[] { "waterskin", "water" }, "Waterskin", "A leather skin filled with water");
+
       player.Inventory.Put(coin);
+      player.Inventory.Put(coin);
+      player.Inventory.Put(coin);
+      player.Inventory.Put(coin);
+      player.Inventory.Put(bag);
+      player.Inventory.Put(sword);
+      player.Inventory.Put(torch);
+
+      bag.Inventory.Put(waterskin);
+      bag.Inventory.Put(axe);
+      // - - - - - - - - - -
+      //
 
       // user input loop
       while (!finished) {
-        Console.WriteLine("Enter a command");
-        string command = Console.ReadLine();
+        Console.WriteLine("Enter a command: ");
+        string? command = Console.ReadLine();
 
-        if (command.ToLower() == "exit") {
+        if (command == null) {
+          Console.WriteLine("Please enter a command. View commands by typing 'help'.");
+          continue;
+        }
+
+        if (command.ToLower() == "exit" || command.ToLower() == "ex") {
           finished = true;
           break;
+        }
+        else if (command.ToLower() == "help") {
+          Console.WriteLine(help);
+          continue;
         }
 
         string[] split = command.Split(" ");
 
-        Console.WriteLine(cmd.Execute(player, split));
-      } 
-      
+        // handle command type
+        if (split[0].ToLower() == "look") {
+          Console.WriteLine(lcmd.Execute(player, split));
+        }
+        else if (split[0].ToLower() == "move" || split[0].ToLower() == "go" || split[0].ToLower() == "head" || split[0].ToLower() == "leave" || split[0].ToLower() == "walk") {
+          Console.WriteLine(mcmd.Execute(player, split));
+        }
+        else if (split[0].ToLower() == "drop") {
+          player.Inventory.Take(split[1]);
+        }
+        else {
+          Console.WriteLine("Command not recognized. Please use 'help' for list of commands.");
+        }
+        Space();
+      }
+
 
       // - - - - - - - - - -
 

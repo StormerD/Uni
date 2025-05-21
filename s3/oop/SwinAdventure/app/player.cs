@@ -1,20 +1,30 @@
 namespace SwinAdventure {
   public class Player : GameObject, IHaveInventory {
     // fields
-   private Inventory _inventory;
+    private Inventory _inventory;
+    private Location _location;
 
     // constructors
-    public Player(string name, string description) :
-    base(new string[] {"me", "inventory"}, name, description) {
+    public Player(string name, string description, Location location) :
+    base(new string[] { "me", "inventory" }, name, description) {
       _inventory = new Inventory();
+      _location = location;
     }
 
     // methods
     public GameObject? Locate(string id) {
       if (AreYou(id)) {
         return this;
-      } else {
-        return Inventory.Fetch(id);
+      }
+      GameObject obj = Inventory.Fetch(id);
+      if (obj != null) {
+        return obj;
+      }
+      if (Location != null) {
+        return Location.Locate(id);
+      }
+      else {
+        return null;
       }
     }
 
@@ -37,6 +47,15 @@ namespace SwinAdventure {
     public Inventory Inventory {
       get {
         return _inventory;
+      }
+    }
+
+    public Location Location {
+      get {
+        return _location;
+      }
+      set {
+        _location = value;
       }
     }
 

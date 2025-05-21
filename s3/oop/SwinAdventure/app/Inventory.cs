@@ -1,12 +1,12 @@
 namespace SwinAdventure {
-// Inventory()
-// HasItem(string : id) : bool
-// Put(Item : itm) : void
-// Put_UniqueItem(Item : itm) : void
-// Put_ItemWithLimit(Item : itm) : void
-// Fetch(string : id) : Item / Null
-// Take(string : id) : Item / Null
-// ItemList : string
+    // Inventory()
+    // HasItem(string : id) : bool
+    // Put(Item : itm) : void
+    // Put_UniqueItem(Item : itm) : void
+    // Put_ItemWithLimit(Item : itm) : void
+    // Fetch(string : id) : Item / Null
+    // Take(string : id) : Item / Null
+    // ItemList : string
     public class Inventory {
         // fields
         private List<Item> _items;
@@ -58,7 +58,7 @@ namespace SwinAdventure {
 
         // defines Fetch method
         // locates item from passed id and returns item
-            public Item? Fetch(string id) {
+        public Item? Fetch(string id) {
             foreach (Item item in _items) {
                 if (item.AreYou(id)) {
                     return item;
@@ -87,13 +87,44 @@ namespace SwinAdventure {
                 // foreach (Item item in _items) {
                 //     list = list + "\t" + item.ShortDescription + "\n";
                 // }
+
                 // option 2. separate list elements by commas
-                List<string> ItemDescriptionList = new List<string>();
+                // List<string> ItemDescriptionList = new List<string>();
+                // foreach (Item item in _items) {
+                //     ItemDescriptionList.Add(item.ShortDescription);
+                // }
+                // list = string.Join(", ", ItemDescriptionList);
+                // return list;
+
+                // dictionary to count identical items
+                Dictionary<string, int> itemCount = new Dictionary<string, int>();
                 foreach (Item item in _items) {
-                    ItemDescriptionList.Add(item.ShortDescription);
+                    string desc = item.ShortDescription;
+                    if (itemCount.ContainsKey(desc)) {
+                        itemCount[desc]++;
+                    }
+                    else {
+                        itemCount[desc] = 1;
+                    }
                 }
-                list = string.Join(", ", ItemDescriptionList);
-                return list;
+
+                // build output
+                List<string> output = new List<string>();
+                foreach (var pair in itemCount) {
+                    if (pair.Value > 1) {
+                        output.Add($"{pair.Value} x {pair.Key}");
+                    }
+                    else {
+                        output.Add(pair.Key);
+                    }
+                }
+                return string.Join(", ", output);
+            }
+        }
+        
+        public int ItemCount {
+            get {
+                return _items.Count;
             }
         }
     }
