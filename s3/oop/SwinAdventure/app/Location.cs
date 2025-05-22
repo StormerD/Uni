@@ -84,7 +84,7 @@ namespace SwinAdventure{
           nameDescription = " an unnamed location";
         }
 
-        return "You are in a " + nameDescription + ". " + base.FullDescription + ".\n" + ItemList + "\n" + PathList;
+        return "You are in a " + nameDescription + ". " + base.FullDescription + ".\n" + ItemList  + PathList;
       }
     }
   }

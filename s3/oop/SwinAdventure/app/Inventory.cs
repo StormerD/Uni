@@ -79,24 +79,25 @@ namespace SwinAdventure {
             return null;
         }
 
+            // option 1. separate list elements by new line
+            // foreach (Item item in _items) {
+            //     list = list + "\t" + item.ShortDescription + "\n";
+            // }
+
+            // option 2. separate list elements by commas
+            // List<string> ItemDescriptionList = new List<string>();
+            // foreach (Item item in _items) {
+            //     ItemDescriptionList.Add(item.ShortDescription);
+            // }
+            // list = string.Join(", ", ItemDescriptionList);
+            // return list;
+
+            // dictionary to count identical items
+                
         // defines ItemList property
         public string ItemList {
             get {
                 string list = String.Empty;
-                // option 1. separate list elements by new line
-                // foreach (Item item in _items) {
-                //     list = list + "\t" + item.ShortDescription + "\n";
-                // }
-
-                // option 2. separate list elements by commas
-                // List<string> ItemDescriptionList = new List<string>();
-                // foreach (Item item in _items) {
-                //     ItemDescriptionList.Add(item.ShortDescription);
-                // }
-                // list = string.Join(", ", ItemDescriptionList);
-                // return list;
-
-                // dictionary to count identical items
                 Dictionary<string, int> itemCount = new Dictionary<string, int>();
                 foreach (Item item in _items) {
                     string desc = item.ShortDescription;

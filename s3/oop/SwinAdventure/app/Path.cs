@@ -16,7 +16,7 @@ namespace SwinAdventure {
 
     // methods
     public void Move(Player player) {
-      if (_destination != null) {
+      if (_destination != null && !_isBlocked) {
         player.Location = _destination;
       }
     }

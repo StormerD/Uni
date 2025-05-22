@@ -5,10 +5,9 @@ namespace SwinAdventure {
     private Location _location;
 
     // constructors
-    public Player(string name, string description, Location location) :
-    base(new string[] { "me", "inventory" }, name, description) {
+    public Player(string name, string desc) :
+    base(new string[] { "me", "inventory" }, name, desc) {
       _inventory = new Inventory();
-      _location = location;
     }
 
     // methods
