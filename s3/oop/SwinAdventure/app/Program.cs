@@ -66,27 +66,36 @@ namespace MainProgram {
 
       // init inventory
       Bag bag;
-      Item coin;
+      Item silver;
+      Item gold;
       Item sword;
       Item axe;
       Item torch;
       Item waterskin;
 
       bag = new Bag(new string[] { "bag" }, "Leather Bag", "A leather bag used to store items");
-      coin = new Item(new string[] { "coin", "gold" }, "Gold Coin", "A valuable piece of currency");
+      silver = new Item(new string[] { "silver" }, "Silver Coin", "A not so valuable piece of currency");
+      gold = new Item(new string[] { "gold" }, "Gold Coin", "A valuable piece of currency");
       sword = new Item(new string[] { "sword" }, "Steel Sword", "A sharp steel sword");
       axe = new Item(new string[] { "axe" }, "Wooden Axe", "A wooden axe used for chopping wood");
       torch = new Item(new string[] { "torch", "light" }, "Torch", "A torch to light the path");
       waterskin = new Item(new string[] { "waterskin", "water" }, "Waterskin", "A leather skin filled with water");
 
+      for (int i = 0; i < 150; i++) {
+        player.Inventory.Put(silver);
+      }
       for (int i = 0; i < 500; i++) {
-        player.Inventory.Put(coin);
+        player.Inventory.Put(gold);
       }
       player.Inventory.Put(bag);
       player.Inventory.Put(sword);
       player.Inventory.Put(torch);
 
       bag.Inventory.Put(waterskin);
+      for (int i = 0; i < 100; i++) {
+        bag.Inventory.Put(silver);
+      }
+      bag.Inventory.Put(gold);
       bag.Inventory.Put(axe);
       // - - - - - - - - - -
 

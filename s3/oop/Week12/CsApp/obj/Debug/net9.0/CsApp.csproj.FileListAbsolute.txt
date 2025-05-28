@@ -1,0 +1,15 @@
+C:\Users\drodw\Desktop\organiser\Uni\s3\oop\week12\CsApp\obj\Debug\net9.0\CsApp.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\drodw\Desktop\organiser\Uni\s3\oop\week12\CsApp\obj\Debug\net9.0\CsApp.AssemblyInfoInputs.cache
+C:\Users\drodw\Desktop\organiser\Uni\s3\oop\week12\CsApp\obj\Debug\net9.0\CsApp.AssemblyInfo.cs
+C:\Users\drodw\Desktop\organiser\Uni\s3\oop\week12\CsApp\obj\Debug\net9.0\CsApp.csproj.CoreCompileInputs.cache
+C:\Users\drodw\Desktop\organiser\Uni\s3\oop\week12\CsApp\obj\Debug\net9.0\CsApp.sourcelink.json
+C:\Users\drodw\Desktop\organiser\Uni\s3\oop\week12\CsApp\bin\Debug\net9.0\CsApp.exe
+C:\Users\drodw\Desktop\organiser\Uni\s3\oop\week12\CsApp\bin\Debug\net9.0\CsApp.deps.json
+C:\Users\drodw\Desktop\organiser\Uni\s3\oop\week12\CsApp\bin\Debug\net9.0\CsApp.runtimeconfig.json
+C:\Users\drodw\Desktop\organiser\Uni\s3\oop\week12\CsApp\bin\Debug\net9.0\CsApp.dll
+C:\Users\drodw\Desktop\organiser\Uni\s3\oop\week12\CsApp\bin\Debug\net9.0\CsApp.pdb
+C:\Users\drodw\Desktop\organiser\Uni\s3\oop\week12\CsApp\obj\Debug\net9.0\CsApp.dll
+C:\Users\drodw\Desktop\organiser\Uni\s3\oop\week12\CsApp\obj\Debug\net9.0\refint\CsApp.dll
+C:\Users\drodw\Desktop\organiser\Uni\s3\oop\week12\CsApp\obj\Debug\net9.0\CsApp.pdb
+C:\Users\drodw\Desktop\organiser\Uni\s3\oop\week12\CsApp\obj\Debug\net9.0\CsApp.genruntimeconfig.cache
+C:\Users\drodw\Desktop\organiser\Uni\s3\oop\week12\CsApp\obj\Debug\net9.0\ref\CsApp.dll
