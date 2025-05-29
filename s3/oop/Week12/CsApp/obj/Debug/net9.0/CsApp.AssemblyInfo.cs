@@ -13,7 +13,7 @@ using System.Reflection;
 [assembly: System.Reflection.AssemblyCompanyAttribute("CsApp")]
 [assembly: System.Reflection.AssemblyConfigurationAttribute("Debug")]
 [assembly: System.Reflection.AssemblyFileVersionAttribute("1.0.0.0")]
-[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+32ddd783e6d49b9210eed636371df599512a581b")]
+[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+d1fac2b840e7f5b632510d9c34593d506e4d6955")]
 [assembly: System.Reflection.AssemblyProductAttribute("CsApp")]
 [assembly: System.Reflection.AssemblyTitleAttribute("CsApp")]
 [assembly: System.Reflection.AssemblyVersionAttribute("1.0.0.0")]

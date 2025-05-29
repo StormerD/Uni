@@ -55,6 +55,7 @@ def main():
 
   print("Controlling the clock...")
   space()
+  # Handle commands.
   controllingClock = True
   while controllingClock:
     command = input("What do you want to do? (tick count[default=1], reset, time, test count[default=1000000], exit): ").strip().lower()
