@@ -1,0 +1,20 @@
+Thank you Sam...
+
+Now lets look at our final prototype's design and user experience choices.
+We've applied various principles and design choices that enhance both the functionality of our system, and the ease of use for our users. 
+We have incorperated principles like consistency, centralized navigation, efficiency and viewing information at a glance.
+
+Demonstrating these principles;
+- We use the same colour scheme and layout template for every page. By using consistency in our pages, we improve the user's experience navigating our system and it makes the pages feel more connected and cohesive.
+
+- We have implimented a navigation bar for quick and simple navigation between pages, as well as a search bar to go straight to specific content.
+
+- In the Incident Management page, we have a section dedicated to showing how many incidents are being monitored and the current status of them. By putting this in it's own section, it improves the readability of the information, which decreases the time it takes for the user who just jumped on the system to understand the current situation.
+
+One challenge we faced was deciding how the admin user permissions compared to the permissions of a general user.
+
+We eventaully decided that general users should only be able to submit reports, and that the admins are the only people that can review the active reports, view the status of current incidents, then take relevant actions. We also decided that both general users and admins should have access to the Email Server page, and the Resource Archive page to view archived reports and incident files for research purposes. 
+
+To list some improvements to make on our prototype based on peer feedback. Some of our pages are too cluttered. This creates a lack of readability on our page and makes it hard for users to understand the content and navigate around. This makes the user spend more time reading the page to understand the information, which means a longer delay to carry out relevant actions to rectefy the incident, decreasing efficiency. 
+
+In the next iteration of our prototype we will make more use of white space in our pages and spread the information out more to improve readability and increase efficiency.
