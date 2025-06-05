@@ -1,3 +1,8 @@
+// - - - - - - - - - - - - - - - - -
+// By Dylan Rodwell
+// 105341089
+// - - - - - - - - - - - - - - - - -
+
 using SplashKitSDK;
 
 namespace ShapeDrawer {
@@ -5,7 +10,8 @@ namespace ShapeDrawer {
     private enum ShapeKind {
       Rectangle,
       Circle,
-      Line
+      Line,
+      MLine,
     }
 
     public static void Main() {
@@ -16,8 +22,8 @@ namespace ShapeDrawer {
 
       // VARIABLES
       Drawing _myDrawing;
-      Point2D _mousePos;
       ShapeKind _kindToAdd;
+      Point2D _mousePos;
 
       // SETUP VARIABLES
       _myDrawing = new Drawing();
@@ -28,86 +34,38 @@ namespace ShapeDrawer {
         // CLEAR SCREEN
         SplashKit.ProcessEvents();
         SplashKit.ClearScreen();
-
-        // UPDATE
+        
+        // UPDATE MOUSE POSITION
         _mousePos.X = SplashKit.MouseX();
         _mousePos.Y = SplashKit.MouseY();
 
-        // EVENT on_key_D
-        if (SplashKit.KeyTyped(KeyCode.DKey)) {
-          Random rand = new Random();
-          int shapeCount = rand.Next(1, 5); // Draw between 1 and 5 shapes
-          for (int i = 0; i < shapeCount; i++) {
-            Color randomColor = SplashKit.RandomRGBColor(255);
-            Shape shape;
-            int shapeType = rand.Next(0, 3); // 0 for Rectangle, 1 for Circle, 2 for Line
-            float x = rand.Next(0, winWidth);
-            float y = rand.Next(0, winHeight);
-
-            switch (shapeType) {
-              case 0:
-                shape = new MyRectangle();
-                break;
-              case 1:
-                shape = new MyCircle();
-                break;
-              default:
-                shape = new MyLine();
-                break;
-            }
-            shape.X = x;
-            shape.Y = y;
-            shape.Color = randomColor;
-            _myDrawing.AddShape(shape);
-          }
-          Console.WriteLine(shapeCount + " Random Shapes Added!");
-        }
-
-        // Event on_key_N
-        if (SplashKit.KeyTyped(KeyCode.NKey)) {
-          Random rand = new Random();
-          float baseX = rand.Next(50, winWidth - 100); // X border
-          float baseY = rand.Next(50, winHeight - 150); // Y border
-          Color baseColor = Color.RGBAColor(0, 0, 0, 255); // Color black
-          
-          NameDrawer.DrawName(_myDrawing, baseX, baseY, baseColor);
-        }
-
-        // EVENT on_key_M
-        if (SplashKit.KeyTyped(KeyCode.MKey)) {
-          ScaleShapes.ScaleAllShapes(_myDrawing, 0.8f);
-        }
-
-        // EVENT on_key_A
-        if (SplashKit.KeyTyped(KeyCode.AKey)) {
-          foreach (Shape s in _myDrawing.Shapes) {
-            Color randomColor = SplashKit.RandomRGBColor(255);
-            s.Color = randomColor;
-          }
-          Console.WriteLine("Selected Shapes Colored!");
-        }
-
-        // EVENT on_key_R
+        // Key R -- Select Rectangle
         if (SplashKit.KeyTyped(KeyCode.RKey)) {
           _kindToAdd = ShapeKind.Rectangle;
           Console.WriteLine("Rectangle Selected!");
         }
 
-        // EVENT on_key_C
+        // Key C -- Select Circle
         if (SplashKit.KeyTyped(KeyCode.CKey)) {
           _kindToAdd = ShapeKind.Circle;
           Console.WriteLine("Circle Selected!");
         }
 
-        // EVENT on_key_L
-        if (SplashKit.KeyTyped(KeyCode.LKey)) {
+        // Key K -- Select Line
+        if (SplashKit.KeyTyped(KeyCode.KKey)) {
           _kindToAdd = ShapeKind.Line;
           Console.WriteLine("Line Selected!");
         }
 
-        // EVENT on_click_LEFT
+        // Key L -- Select Multiple Lines
+        if (SplashKit.KeyTyped(KeyCode.LKey)) {
+          _kindToAdd = ShapeKind.MLine;
+          Console.WriteLine("Multiple Lines Selected!");
+        }
+
+        // Key LMB -- Add Shape
         if (SplashKit.MouseClicked(MouseButton.LeftButton)) {
-          if (_kindToAdd == ShapeKind.Line) {
+          if (_kindToAdd == ShapeKind.MLine) {
             int i = 0;
             int j = 0;
             while (i < 9) {
@@ -119,11 +77,15 @@ namespace ShapeDrawer {
               j += 10;
               i += 1;
             }
-          } else {
+          }
+          else {
             Shape newShape;
             switch (_kindToAdd) {
               case ShapeKind.Circle:
                 newShape = new MyCircle();
+                break;
+              case ShapeKind.Line:
+                newShape = new MyLine();
                 break;
               default:
                 newShape = new MyRectangle();
@@ -135,25 +97,18 @@ namespace ShapeDrawer {
           }
         }
 
-        // EVENT on_click_RIGHT
+        // Key RMB -- Select Shapes
         if (SplashKit.MouseClicked(MouseButton.RightButton)) {
           _myDrawing.SelectShapesAt(_mousePos);
         }
 
-        // EVENT on_key_SPACE
+        // Key SPACE -- New Background
         if (SplashKit.KeyTyped(KeyCode.SpaceKey)) {
           _myDrawing.Background = SplashKit.RandomColor();
           Console.WriteLine("New Background!");
         }
 
-        // EVENT on_key_DELETE
-        if (SplashKit.KeyTyped(KeyCode.DeleteKey)) {
-          foreach (Shape s in _myDrawing.SelectedShapes) {
-            _myDrawing.RemoveShape(s);
-          }
-        }
-
-        // EVENT on_key_BACKSPACE
+        // Key BACKSPACE -- Delete Last Shape
         if (SplashKit.KeyTyped(KeyCode.BackspaceKey)) {
           if (_myDrawing.LastShape != null) {
             Console.WriteLine("Deleting Shape: " + _myDrawing.LastShape.Type);
@@ -164,13 +119,49 @@ namespace ShapeDrawer {
           }
         }
 
-        // EVENT on_key_S
+        // Key DELETE -- Delete Selected Shapes
+        if (SplashKit.KeyTyped(KeyCode.DeleteKey)) {
+          foreach (Shape s in _myDrawing.SelectedShapes) {
+            _myDrawing.RemoveShape(s);
+          }
+        }
+
+        // Key A -- Color All Shapes
+        if (SplashKit.KeyTyped(KeyCode.AKey)) {
+          foreach (Shape s in _myDrawing.Shapes) {
+            Color randomColor = SplashKit.RandomRGBColor(255);
+            s.Color = randomColor;
+          }
+          Console.WriteLine("All Shapes Colored!");
+        }
+
+        // Key N -- Draw Name
+        if (SplashKit.KeyTyped(KeyCode.NKey)) {
+          Random rand = new Random();
+          float baseX = rand.Next(50, winWidth - 100); // X border
+          float baseY = rand.Next(50, winHeight - 150); // Y border
+          Color baseColor = Color.RGBAColor(0, 0, 0, 255); // Color black
+          
+          NameDrawer.DrawName(_myDrawing, baseX, baseY, baseColor);
+        }
+
+        // Key D -- Draw Random Shapes
+        if (SplashKit.KeyTyped(KeyCode.DKey)) {
+          RandomShapeDrawer.AddRandomShapes(_myDrawing, winWidth, winHeight);
+        }
+
+        // Key M -- Scale Shapes
+        if (SplashKit.KeyTyped(KeyCode.MKey)) {
+          ScaleShapes.ScaleAllShapes(_myDrawing, 0.8f);
+        }
+
+        // Key S -- Save Drawing
         if (SplashKit.KeyTyped(KeyCode.SKey)) {
           _myDrawing.Save("TestDrawing.txt");
           Console.WriteLine("Drawing Saved!");
         }
 
-        // // EVENT on_key_O
+        // Key O -- Load Drawing
         if (SplashKit.KeyTyped(KeyCode.OKey)) {
           try {
           _myDrawing.Load("TestDrawing.txt");

@@ -1,0 +1,54 @@
+Project_Script.txt
+-- Key Features --
+- draw shape
+- change shape type to draw
+- select shape
+- change background colour
+- delete most recently drawn shape
+- delete selected shape
+- change colour of all shapes
+- draw my name
+- draw random shapes
+- scale the size of every shape
+- save shapes to file
+- load shapes from file
+
+-- Script --
+Hello, my name is Dylan Rodwell, my student ID is 105341089. I have tasked with creating a simple shape drawing program using c# and the splashkitSDK. I am doing option 2 of the final project. Over the weeks I have added various features which I will demonstrate today.
+
+The features of my program I will go over include:
+- drawing a shape to the window,
+- changing the type of shape drawn,
+- changing the colour of the background,
+- selecting shapes,
+- deleting the most recently drawn shape,
+- deleting selected shapes,
+- changing the colour of all shapes,
+- drawing my name in shapes,
+- drawing random shapes,
+- changing the size of all shapes,
+- and saving the current canvas to a file and loading it.
+
+To go over the basics of the program, you draw shapes with the LMB. The shapes available are a rectangle, circle and line, selected with R, C and K respectively, and if you press L it prints 9 parallel lines.
+
+Each shape has its own class that inherits from a parent "Shape" class. Each shape object knows it's (x, y) position, if it is selected and it's colour, and each individual type of shape knows things specific to them.
+
+Rectangles know their width and height, circles know their radius, and lines know their length.
+
+Each shape can draw itself, draw it's outline, check if a point is in the shape, save the shape to the save file, and load data from the save file.
+
+Every shape drawn on the screen is added to a list on a "Drawing" class that keeps track of the canvas and all the shapes on it. The drawing object knows every shape on the canvas, the background colour, and a streamreader and streamwriter for saving and loading. Drawing objects can draw every shape at once, select a shape on the mouse position, add and remove shapes from the shape list, and save and load the current canvas. 
+
+To go over the basics of the program, 
+- shapes
+- shape types
+
+Now lets talk about the program and it's features.
+- selecting different shapes.
+- adding, selecting and removing shapes.
+- background.
+- colour all.
+- draw name.
+- draw random shapes.
+- scale shapes.
+- saving and loading.

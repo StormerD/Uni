@@ -9,11 +9,11 @@ namespace ShapeDrawer {
     public MyRectangle(Color color, float x, float y, float width, float height) : base(color) {
       X = x;
       Y = y;
-      _width = 100;
-      _height = 100;
+      _width = width;
+      _height = height;
     }
 
-    public MyRectangle() : this(Color.Green, 0.0f, 0.0f, 198, 189) {}
+    public MyRectangle() : this(Color.Green, 0.0f, 0.0f, 100, 100) {}
 
     // METHODS
     public override void Draw() {
