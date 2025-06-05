@@ -17,11 +17,13 @@ namespace ShapeDrawer {
         public Shape() : this(Color.Yellow) {}
 
         // METHODS
-        public abstract void Draw();
+        public virtual void Draw() { }
 
-        public abstract void DrawOutline();
+        public virtual void DrawOutline() { }
 
-        public abstract bool IsAt(Point2D pt);
+        public virtual bool IsAt(Point2D pt) {
+            return false;
+        }
 
         public virtual void SaveTo(StreamWriter writer) {
             writer.WriteColor(Color);

@@ -3,10 +3,10 @@ using SplashKitSDK;
 namespace ShapeDrawer {
   public class MyLine : Shape {
     // FIELDS
-    private int _length;
+    private float _length;
 
     // CONSTRUCTORS
-    public MyLine(Color color, float x, float y, int length) : base(color) {
+    public MyLine(Color color, float x, float y, float length) : base(color) {
       X = x;
       Y = y;
       _length = length;
@@ -44,13 +44,16 @@ namespace ShapeDrawer {
     
     public override void LoadFrom(StreamReader reader) {
       base.LoadFrom(reader);
-      reader.ReadInteger();
+      Length = reader.ReadSingle();
     }
 
     // PROPERTIES
-    public int Length {
+    public float Length {
       get {
         return _length;
+      }
+      set {
+        _length = value;
       }
     }
 

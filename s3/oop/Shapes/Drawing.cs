@@ -6,8 +6,8 @@ namespace ShapeDrawer {
     private readonly List<Shape> _shapes;
     private Color _background;
 
-    StreamReader reader;
-    StreamWriter writer;
+    private StreamReader reader;
+    private StreamWriter writer;
 
     // CONSTRUCTORS
     public Drawing(Color background) {

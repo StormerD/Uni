@@ -1,17 +1,17 @@
 {
   "format": 1,
   "restore": {
-    "C:\\Users\\drodw\\Desktop\\organiser\\Uni\\s3\\oop\\Shapes\\Shapes.csproj": {}
+    "C:\\Users\\drodw\\Desktop\\organiser\\Uni\\s3\\oop\\Shapes_Option1\\Shapes.csproj": {}
   },
   "projects": {
-    "C:\\Users\\drodw\\Desktop\\organiser\\Uni\\s3\\oop\\Shapes\\Shapes.csproj": {
+    "C:\\Users\\drodw\\Desktop\\organiser\\Uni\\s3\\oop\\Shapes_Option1\\Shapes.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "C:\\Users\\drodw\\Desktop\\organiser\\Uni\\s3\\oop\\Shapes\\Shapes.csproj",
+        "projectUniqueName": "C:\\Users\\drodw\\Desktop\\organiser\\Uni\\s3\\oop\\Shapes_Option1\\Shapes.csproj",
         "projectName": "Shapes",
-        "projectPath": "C:\\Users\\drodw\\Desktop\\organiser\\Uni\\s3\\oop\\Shapes\\Shapes.csproj",
+        "projectPath": "C:\\Users\\drodw\\Desktop\\organiser\\Uni\\s3\\oop\\Shapes_Option1\\Shapes.csproj",
         "packagesPath": "C:\\Users\\drodw\\.nuget\\packages\\",
-        "outputPath": "C:\\Users\\drodw\\Desktop\\organiser\\Uni\\s3\\oop\\Shapes\\obj\\",
+        "outputPath": "C:\\Users\\drodw\\Desktop\\organiser\\Uni\\s3\\oop\\Shapes_Option1\\obj\\",
         "projectStyle": "PackageReference",
         "configFilePaths": [
           "C:\\Users\\drodw\\AppData\\Roaming\\NuGet\\NuGet.Config"

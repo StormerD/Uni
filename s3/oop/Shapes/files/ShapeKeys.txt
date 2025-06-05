@@ -1,0 +1,23 @@
+-- SHAPE PROGRAM KEYS --
+LMB: draw shape
+RMB: select shape
+DELETE: delete selected shapes
+BACKSPACE: delete most recent shape
+A: change colour of all shapes
+R: select rectangle to draw
+C: select circle to draw
+L: select line to draw
+N: draw name
+D: draw random shapes
+S: save file
+O: load file
+M: scale down
+
+-- UML DIAGRAMS --
+-Drawing
+-Shape
+-MyRectangle
+-MyCircle
+-MyLine
+-ExtentionMethods
+-Point2D

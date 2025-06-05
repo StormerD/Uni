@@ -3,10 +3,10 @@ using SplashKitSDK;
 namespace ShapeDrawer {
   public class MyRectangle : Shape {
     // FIELDS
-    private int _width, _height;
+    private float _width, _height;
 
     // CONSTRUCTORS
-    public MyRectangle(Color color, float x, float y, int width, int height) : base(color) {
+    public MyRectangle(Color color, float x, float y, float width, float height) : base(color) {
       X = x;
       Y = y;
       _width = 100;
@@ -27,8 +27,8 @@ namespace ShapeDrawer {
       Color bColor = Color.Black;
       float bX = X - 4;
       float bY = Y - 4;
-      int bWidth = Width + 8;
-      int bHeight = Height + 8;
+      float bWidth = Width + 8;
+      float bHeight = Height + 8;
       SplashKit.FillRectangle(bColor, bX, bY, bWidth, bHeight);
     }
 
@@ -49,12 +49,12 @@ namespace ShapeDrawer {
 
     public override void LoadFrom(StreamReader reader) {
       base.LoadFrom(reader);
-      reader.ReadInteger();
-      reader.ReadInteger();
+      Width = reader.ReadSingle();
+      Height = reader.ReadSingle();
     }
 
     // PROPERTIES
-    public int Width {
+    public float Width {
       get {
         return _width;
       } set {
@@ -62,7 +62,7 @@ namespace ShapeDrawer {
       }
     }
 
-    public int Height {
+    public float Height {
       get {
         return _height;
       } set {

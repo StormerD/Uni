@@ -3,10 +3,10 @@ using SplashKitSDK;
 namespace ShapeDrawer {
   public class MyCircle : Shape {
     // FIELDS
-    private int _radius;
+    private float _radius;
 
     // CONSTRUCTORS
-    public MyCircle(Color color, int radius) : base(color) {
+    public MyCircle(Color color, float radius) : base(color) {
       _radius = radius;
     }
 
@@ -43,11 +43,11 @@ namespace ShapeDrawer {
 
     public override void LoadFrom(StreamReader reader) {
       base.LoadFrom(reader);
-      reader.ReadInteger();
+      Radius = reader.ReadSingle();
     }
 
     // PROPERTIES
-    public int Radius {
+    public float Radius {
       get {
         return _radius;
       } set {

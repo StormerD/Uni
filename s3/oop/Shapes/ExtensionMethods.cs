@@ -17,4 +17,4 @@ namespace ShapeDrawer {
       writer.WriteLine("{0}\n{1}\n{2}", color.R, color.G, color.B);
     }
   }
-}
+} 
