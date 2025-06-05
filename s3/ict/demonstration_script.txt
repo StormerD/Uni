@@ -1,7 +1,7 @@
 Thank you Sam...
 
 Now lets look at our final prototype's design and user experience choices.
-We've applied various principles and design choices that enhance both the functionality of our system, and the ease of use for our users. 
+We've applied various principles and design choices that enhanc beoth the functionality of our system, and the ease of use for our users. 
 We have incorperated principles like consistency, centralized navigation, efficiency and viewing information at a glance.
 
 Demonstrating these principles;
