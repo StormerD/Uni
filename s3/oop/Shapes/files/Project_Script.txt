@@ -16,39 +16,53 @@ Project_Script.txt
 -- Script --
 Hello, my name is Dylan Rodwell, my student ID is 105341089. I have tasked with creating a simple shape drawing program using c# and the splashkitSDK. I am doing option 2 of the final project. Over the weeks I have added various features which I will demonstrate today.
 
-The features of my program I will go over include:
-- drawing a shape to the window,
-- changing the type of shape drawn,
-- changing the colour of the background,
-- selecting shapes,
-- deleting the most recently drawn shape,
-- deleting selected shapes,
-- changing the colour of all shapes,
-- drawing my name in shapes,
-- drawing random shapes,
-- changing the size of all shapes,
-- and saving the current canvas to a file and loading it.
-
 To go over the basics of the program, you draw shapes with the LMB. The shapes available are a rectangle, circle and line, selected with R, C and K respectively, and if you press L it prints 9 parallel lines.
 
-Each shape has its own class that inherits from a parent "Shape" class. Each shape object knows it's (x, y) position, if it is selected and it's colour, and each individual type of shape knows things specific to them.
-
-Rectangles know their width and height, circles know their radius, and lines know their length.
-
-Each shape can draw itself, draw it's outline, check if a point is in the shape, save the shape to the save file, and load data from the save file.
-
-Every shape drawn on the screen is added to a list on a "Drawing" class that keeps track of the canvas and all the shapes on it. The drawing object knows every shape on the canvas, the background colour, and a streamreader and streamwriter for saving and loading. Drawing objects can draw every shape at once, select a shape on the mouse position, add and remove shapes from the shape list, and save and load the current canvas. 
-
-To go over the basics of the program, 
-- shapes
-- shape types
-
 Now lets talk about the program and it's features.
-- selecting different shapes.
-- adding, selecting and removing shapes.
-- background.
-- colour all.
-- draw name.
-- draw random shapes.
-- scale shapes.
-- saving and loading.
+
+At the top of the program file, there is a private enumeration called "ShapeKind" that defines the types of shapes that can be added to the program: rectangle, circle, line, and mline is used to draw multiple parallel lines.
+
+When initialising the window, it uses a width of 800px and a height of 600px.
+
+The variables defined are the drawing object that manages the canvas, _kindToAdd that stores the type of shape to be drawn using the constants in the enumeration earlier, and the mouse position stored as a Point2D.
+
+When setting up the variables, _kindToAdd is set to a circle as the default shape.
+
+Each frame the program processes all user inputs and clears the canvas before continuing with the program.
+
+Adding shapes to the canvas is done with the draw function at the end of the program. This draw function clears the screen with the background colour, then draws each shape in the shape list.
+
+When pressing the LMB, the program checks what the value of _kindToAdd is, creates a new shape accordingly, and adds it to the shape list to be drawn.
+
+First it checks if _kindToAdd is MLine because MLine is handled differently to the other kinds of shapes. If MLine is selected it loops 9 times making a new line, giving the line an (x, y) position, adding it to the shape list, and changes the y position of the next line by 10 to make 9 parallel lines.
+
+If _kindToAdd is not MLine, it goes through a switch case, creating a new shape, then whatever shape is created has it's (x, y) position updated and is added to the shape list to be drawn.
+
+When the RMB is pressed to select a shape, the mouse position is passed to the drawing object, which iterates through every shape in the shape list and tells the shape to check if the position is inside their area. If the mouse is over a shape, then the shape is told it is selected and if it is selected when being drawn, it draws it's outline as well.
+
+The type of shape is changed with the R, C, K, and L keys by updating the value of _kindToAdd with the selected shape type.
+
+The drawing object also handles the background colour of the canvas, and when space is pressed it changes the background colour to a random colour. The background colour is drawn every frame in the draw function, clearing the screen with the background colour instead of white.
+
+When BACKSPACE is pressed, the program gets the last shape in the shape list (which is the last drawn shape) from a property in the drawing object and removes it from the shape list, which deletes it. If there are no shapes drawn, the program doesn't delete anything and prints the message "No shape to delete".
+
+When DELETE is pressed, the program gets all the selected shapes from another property in the drawing object, and removes all of them, deleting all selected shapes.
+
+Pressing A iterates through all shapes in the shape list and overwrites the colour with a random one. I used RandomRGBColor instead of RandomColor because RandomColour also randomises the alpha value of the shapes, sometimes making them very hard to see, so RandomRGBColor lets me set the alpha of the shapes to the maximum to easily see them.
+
+Pressing N draws my name in shapes by picking a random (x, y) position to draw the name, setting the colour to black, and calling the DrawName method from the utilities class.
+
+Utilities is a static class that has a collection of static methods for performing actions. The DrawName method draws each letter of my name with shapes. Each shape follows the same pattern of creating the shape, giving it an (x, y) position, defining it's other paramaters (like width and height for rectangles), giving it a colour, then adding it to the shape list. After each letter is drawn, the base Y position is updated to move the draw point over for a new letter.
+
+Presssing the D key draws random shapes to the canvas. This is done using another method from Utilities called AddRandomShapes. This method randomly selects between 1 and 5 shapes to draw. It then loops through that many times and picks a random colour, and a random location to spawn the shape. Next a random number between 0 and 2 (inclusive). 0 is rectangle, 1 is circle and 2 is line After the new shape has been created it is updated with it's position and colour before being added to the shape list.
+
+Pressing M scales each shape's size down. This is done with another method from Utilities called ScaleAllShapes. This iterates through all the shapes in the shape list and multiplies the size paramaters (width, height, radius and length) by 0.8, which reduces the shape's size by 80%.
+
+When the S key is pressed it saves the data of the current canvas to a file. This is done by the drawing object's Save method. it makes a new writer to the given filename, writes the background colour and number of shapes on the canvas, then iterates through all the shapes in the shape list and tells them to write their data as well.
+
+Each shape writes their colour, (x, y) position, and what shape they are so it can be drawn later. Rectangles write their width and height, circles write their radius, and lines write their length.
+
+When the O key is pressed, it locates the save file and reads the information from it to display the saved canvas. This is done in the drawing object's Load method, which reads the first two lines (background colour and shape count), then loops through the number of shapes provided and checks what shape it is, then reads data accordingly. All shapes read their colour, (x, y) position, and what shape it is. If it is a rectangle it will read the width and height, circles read the radius, and lines read their length.
+
+At the end of each frame is where all the shapes in the shape list are drawn and the screen refreshes to show the latest changes.
+

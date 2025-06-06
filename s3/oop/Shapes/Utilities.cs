@@ -1,7 +1,23 @@
 using SplashKitSDK;
 
 namespace ShapeDrawer {
-  public static class NameDrawer {
+  public static class Utilities {
+    public static void ScaleAllShapes(Drawing drawing, float scaleFactor) {
+      foreach (Shape s in drawing.Shapes) {
+        if (s is MyRectangle r) {
+          r.Width = Convert.ToSingle(r.Width * scaleFactor);
+          r.Height = Convert.ToSingle(r.Height * scaleFactor);
+        }
+        else if (s is MyCircle c) {
+          c.Radius = Convert.ToSingle(c.Radius * scaleFactor);
+        }
+        else if (s is MyLine l) {
+          l.Length = Convert.ToSingle(l.Length * scaleFactor);
+        }
+      }    
+    }
+
+
     public static void DrawName(Drawing drawing, float baseX, float baseY, Color color) {
 
       // -- DRAW D --
@@ -91,7 +107,7 @@ namespace ShapeDrawer {
       drawing.AddShape(Lleft);
 
       // -- DRAW A --
-      baseX += 20; // Move baseX for the next shape
+      baseX += 15; // Move baseX for the next shape
 
       // Left vertical line (as a rectangle)
       MyRectangle Aleft = new MyRectangle();
@@ -158,6 +174,35 @@ namespace ShapeDrawer {
       Nright.Height = 30;
       Nright.Color = color;
       drawing.AddShape(Nright);
+    }
+
+    public static void AddRandomShapes(Drawing drawing, int winWidth, int winHeight) {
+      Random rand = new Random();
+      int shapeCount = rand.Next(1, 5); // Draw between 1 and 5 shapes
+      for (int i = 0; i < shapeCount; i++) {
+        SplashKitSDK.Color randomColor = SplashKit.RandomRGBColor(255);
+        Shape shape;
+        float x = rand.Next(0, winWidth);
+        float y = rand.Next(0, winHeight);
+        int shapeType = rand.Next(0, 3); // 0 for Rectangle, 1 for Circle, 2 for Line
+
+        switch (shapeType) {
+          case 0:
+            shape = new MyRectangle();
+            break;
+          case 1:
+            shape = new MyCircle();
+            break;
+          default:
+            shape = new MyLine();
+            break;
+        }
+        shape.X = x;
+        shape.Y = y;
+        shape.Color = randomColor;
+        drawing.AddShape(shape);
+      }
+      Console.WriteLine(shapeCount + " Random Shapes Added!");
     }
   }
 }

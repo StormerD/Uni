@@ -39,30 +39,6 @@ namespace ShapeDrawer {
         _mousePos.X = SplashKit.MouseX();
         _mousePos.Y = SplashKit.MouseY();
 
-        // Key R -- Select Rectangle
-        if (SplashKit.KeyTyped(KeyCode.RKey)) {
-          _kindToAdd = ShapeKind.Rectangle;
-          Console.WriteLine("Rectangle Selected!");
-        }
-
-        // Key C -- Select Circle
-        if (SplashKit.KeyTyped(KeyCode.CKey)) {
-          _kindToAdd = ShapeKind.Circle;
-          Console.WriteLine("Circle Selected!");
-        }
-
-        // Key K -- Select Line
-        if (SplashKit.KeyTyped(KeyCode.KKey)) {
-          _kindToAdd = ShapeKind.Line;
-          Console.WriteLine("Line Selected!");
-        }
-
-        // Key L -- Select Multiple Lines
-        if (SplashKit.KeyTyped(KeyCode.LKey)) {
-          _kindToAdd = ShapeKind.MLine;
-          Console.WriteLine("Multiple Lines Selected!");
-        }
-
         // Key LMB -- Add Shape
         if (SplashKit.MouseClicked(MouseButton.LeftButton)) {
           if (_kindToAdd == ShapeKind.MLine) {
@@ -102,6 +78,30 @@ namespace ShapeDrawer {
           _myDrawing.SelectShapesAt(_mousePos);
         }
 
+        // Key R -- Select Rectangle
+        if (SplashKit.KeyTyped(KeyCode.RKey)) {
+          _kindToAdd = ShapeKind.Rectangle;
+          Console.WriteLine("Rectangle Selected!");
+        }
+
+        // Key C -- Select Circle
+        if (SplashKit.KeyTyped(KeyCode.CKey)) {
+          _kindToAdd = ShapeKind.Circle;
+          Console.WriteLine("Circle Selected!");
+        }
+
+        // Key K -- Select Line
+        if (SplashKit.KeyTyped(KeyCode.KKey)) {
+          _kindToAdd = ShapeKind.Line;
+          Console.WriteLine("Line Selected!");
+        }
+
+        // Key L -- Select Multiple Lines
+        if (SplashKit.KeyTyped(KeyCode.LKey)) {
+          _kindToAdd = ShapeKind.MLine;
+          Console.WriteLine("Multiple Lines Selected!");
+        }
+
         // Key SPACE -- New Background
         if (SplashKit.KeyTyped(KeyCode.SpaceKey)) {
           _myDrawing.Background = SplashKit.RandomColor();
@@ -129,8 +129,7 @@ namespace ShapeDrawer {
         // Key A -- Color All Shapes
         if (SplashKit.KeyTyped(KeyCode.AKey)) {
           foreach (Shape s in _myDrawing.Shapes) {
-            Color randomColor = SplashKit.RandomRGBColor(255);
-            s.Color = randomColor;
+            s.Color = SplashKit.RandomRGBColor(255);
           }
           Console.WriteLine("All Shapes Colored!");
         }
@@ -142,17 +141,17 @@ namespace ShapeDrawer {
           float baseY = rand.Next(50, winHeight - 150); // Y border
           Color baseColor = Color.RGBAColor(0, 0, 0, 255); // Color black
           
-          NameDrawer.DrawName(_myDrawing, baseX, baseY, baseColor);
+          Utilities.DrawName(_myDrawing, baseX, baseY, baseColor);
         }
 
         // Key D -- Draw Random Shapes
         if (SplashKit.KeyTyped(KeyCode.DKey)) {
-          RandomShapeDrawer.AddRandomShapes(_myDrawing, winWidth, winHeight);
+          Utilities.AddRandomShapes(_myDrawing, winWidth, winHeight);
         }
 
         // Key M -- Scale Shapes
         if (SplashKit.KeyTyped(KeyCode.MKey)) {
-          ScaleShapes.ScaleAllShapes(_myDrawing, 0.8f);
+          Utilities.ScaleAllShapes(_myDrawing, 0.8f);
         }
 
         // Key S -- Save Drawing
