@@ -1,0 +1,15 @@
+-- SHAPE PROGRAM KEYS --
+LMB: draw shape
+RMB: select shape
+SPACE: change background colour
+DELETE: delete selected shapes
+BACKSPACE: delete most recent shape
+A: change colour of all shapes
+R: select rectangle to draw
+C: select circle to draw
+L: select line to draw
+N: draw name
+D: draw random shapes
+S: save file
+O: load file
+M: scale down
