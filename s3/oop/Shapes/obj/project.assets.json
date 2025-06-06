@@ -8,19 +8,19 @@
     "net9.0": []
   },
   "packageFolders": {
-    "C:\\Users\\D\\.nuget\\packages\\": {}
+    "C:\\Users\\drodw\\.nuget\\packages\\": {}
   },
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "C:\\Users\\D\\Desktop\\organiser\\Uni\\s3\\oop\\Shapes\\Shapes.csproj",
+      "projectUniqueName": "C:\\Users\\drodw\\Desktop\\organiser\\Uni\\s3\\oop\\Shapes\\Shapes.csproj",
       "projectName": "Shapes",
-      "projectPath": "C:\\Users\\D\\Desktop\\organiser\\Uni\\s3\\oop\\Shapes\\Shapes.csproj",
-      "packagesPath": "C:\\Users\\D\\.nuget\\packages\\",
-      "outputPath": "C:\\Users\\D\\Desktop\\organiser\\Uni\\s3\\oop\\Shapes\\obj\\",
+      "projectPath": "C:\\Users\\drodw\\Desktop\\organiser\\Uni\\s3\\oop\\Shapes\\Shapes.csproj",
+      "packagesPath": "C:\\Users\\drodw\\.nuget\\packages\\",
+      "outputPath": "C:\\Users\\drodw\\Desktop\\organiser\\Uni\\s3\\oop\\Shapes\\obj\\",
       "projectStyle": "PackageReference",
       "configFilePaths": [
-        "C:\\Users\\D\\AppData\\Roaming\\NuGet\\NuGet.Config"
+        "C:\\Users\\drodw\\AppData\\Roaming\\NuGet\\NuGet.Config"
       ],
       "originalTargetFrameworks": [
         "net9.0"
