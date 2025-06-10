@@ -1,17 +1,17 @@
 {
   "format": 1,
   "restore": {
-    "C:\\Users\\D\\Desktop\\organiser\\Uni\\s3\\oop\\Shapes\\Shapes.csproj": {}
+    "C:\\Users\\D\\Desktop\\organiser\\Uni\\s3\\oop\\FinalProject\\Shapes\\Shapes.csproj": {}
   },
   "projects": {
-    "C:\\Users\\D\\Desktop\\organiser\\Uni\\s3\\oop\\Shapes\\Shapes.csproj": {
+    "C:\\Users\\D\\Desktop\\organiser\\Uni\\s3\\oop\\FinalProject\\Shapes\\Shapes.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "C:\\Users\\D\\Desktop\\organiser\\Uni\\s3\\oop\\Shapes\\Shapes.csproj",
+        "projectUniqueName": "C:\\Users\\D\\Desktop\\organiser\\Uni\\s3\\oop\\FinalProject\\Shapes\\Shapes.csproj",
         "projectName": "Shapes",
-        "projectPath": "C:\\Users\\D\\Desktop\\organiser\\Uni\\s3\\oop\\Shapes\\Shapes.csproj",
+        "projectPath": "C:\\Users\\D\\Desktop\\organiser\\Uni\\s3\\oop\\FinalProject\\Shapes\\Shapes.csproj",
         "packagesPath": "C:\\Users\\D\\.nuget\\packages\\",
-        "outputPath": "C:\\Users\\D\\Desktop\\organiser\\Uni\\s3\\oop\\Shapes\\obj\\",
+        "outputPath": "C:\\Users\\D\\Desktop\\organiser\\Uni\\s3\\oop\\FinalProject\\Shapes\\obj\\",
         "projectStyle": "PackageReference",
         "configFilePaths": [
           "C:\\Users\\D\\AppData\\Roaming\\NuGet\\NuGet.Config"
